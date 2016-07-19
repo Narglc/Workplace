@@ -1,4 +1,4 @@
-
+package com.stupid.demo;
 /**
  * Created by narglc on 7/7/16.
  */

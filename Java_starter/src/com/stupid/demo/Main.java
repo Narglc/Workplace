@@ -1,3 +1,5 @@
+package com.stupid.demo;
+
 import java.util.Scanner;
 
 public class Main {
@@ -40,6 +42,7 @@ public class Main {
         System.out.println("平均年龄：" + avg);
         System.out.println("年龄差值：" + minus);
         System.out.println("自减后的年龄：" + newAge);
+
 
 
         //字符串char用单引号，为何不能用双引号？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
