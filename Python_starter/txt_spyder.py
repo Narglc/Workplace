@@ -1,6 +1,6 @@
 #coding:gbk
 
-#该网页主要用于爬去天涯博客的文章，先是爬取html
+#该网页主要用于爬取天涯博客的文章，先是爬取html
 
 import urllib
 import urllib2
