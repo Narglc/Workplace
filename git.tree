@@ -1,0 +1,80 @@
+.
+├── git.tree
+├── Java_starter
+│   ├── Java_stater.iml
+│   ├── newStart
+│   │   └── Outer.java
+│   ├── out
+│   │   └── production
+│   │       └── Java_stater
+│   │           ├── com
+│   │           │   └── stupid
+│   │           │       └── demo
+│   │           │           ├── Demo.class
+│   │           │           ├── HelloWorld.class
+│   │           │           ├── initTelphone.class
+│   │           │           ├── Main.class
+│   │           │           └── Telphone.class
+│   │           ├── Demo.class
+│   │           ├── HelloWorld.class
+│   │           ├── initTelphone.class
+│   │           ├── Main.class
+│   │           ├── Outer.class
+│   │           ├── Outer$Inner.class
+│   │           └── Telphone.class
+│   └── src
+│       └── com
+│           └── stupid
+│               └── demo
+│                   ├── Demo.java
+│                   ├── HelloWorld.java
+│                   ├── initTelphone.java
+│                   ├── Main.java
+│                   └── Telphone.java
+├── Python_starter
+│   ├── autoImgSpyder4meizitu.py
+│   ├── auto_spyder4jiandan.py
+│   ├── CheckIO.py
+│   ├── CollectiveIntelligence.py
+│   ├── doubanPics.py
+│   ├── guess_the_number.py
+│   ├── Hello4Stupid.py
+│   ├── Spider
+│   │   ├── 1.shtml
+│   │   ├── 2.shtml
+│   │   ├── blog
+│   │   │   ├── post-773339-104664588-1.shtml
+│   │   │   ├── post-773339-46750106-1.shtml
+│   │   │   ├── post-773339-48611052-1.shtml
+│   │   │   ├── post-773339-49862390-1.shtml
+│   │   │   ├── post-773339-49878142-1.shtml
+│   │   │   ├── post-773339-49945798-1.shtml
+│   │   │   ├── post-773339-49945816-1.shtml
+│   │   │   ├── post-773339-50080081-1.shtml
+│   │   │   ├── post-773339-50503193-1.shtml
+│   │   │   ├── post-773339-51133538-1.shtml
+│   │   │   ├── post-773339-52972330-1.shtml
+│   │   │   ├── post-773339-53001056-1.shtml
+│   │   │   ├── post-773339-53040092-1.shtml
+│   │   │   ├── post-773339-53162308-1.shtml
+│   │   │   ├── post-773339-64438898-1.shtml
+│   │   │   ├── post-773339-64631556-1.shtml
+│   │   │   ├── post-773339-71229559-1.shtml
+│   │   │   ├── post-773339-82260191-1.shtml
+│   │   │   └── post-773339-82452482-1.shtml
+│   │   ├── Current_test.py
+│   │   ├── testall.py
+│   │   ├── testpart.py
+│   │   ├── test.py
+│   │   ├── tianya_zhuawen.py
+│   │   ├── 科大校运会.txt
+│   │   └── 科大校运会.txt~
+│   ├── spyder_1page4Jiandan.py
+│   ├── tk_test.py
+│   └── txt_spyder.py
+├── README.md
+└── Shell_starter
+    ├── chang_names.sh
+    └── test_array.sh
+
+16 directories, 61 files
