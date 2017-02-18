@@ -2,7 +2,7 @@
 //两种排序算法：选择排序算法、冒泡排序算法。
 class Demo{
 	public static void main(String[] args){
-		int[] arr={23,3,45,56,34,55};
+		int[] arr={23,3,45,56,34,55,66};
 		System.out.println(getMax(arr));
 		System.out.println("45的索引值为"+getIndex(arr,145));
 		//arr=bubbleSort(arr);
@@ -10,8 +10,27 @@ class Demo{
 		for(int k=0;k<arr.length;k++){
 			System.out.print(arr[k]+",");
 		}
+		System.out.println("two split:");
+		System.out.println("halfSearch result:"+halfSearch(arr,34));
 	}
-
+	
+	//使用二分法查找某个数字  arr=[1,2,3,4,5,6,7] 此处使用for循环存在问题！！待修改
+	public static int halfSearch(int[] arr,int target){
+		int min=0;
+		int max=arr.length-1;
+		int mid;
+		for(mid=(min+max)/2;arr[mid]!=target;){
+			if(target>arr[mid]){
+				min=mid+1;
+				System.out.print(mid+','+min+','+max);
+			}else if(target<arr[mid]){
+				max=mid-1;
+				System.out.print(mid+','+min+','+max);
+				break;
+			}
+		}
+		return mid;
+	}
 	//寻找目标元素在数组中的索引值并返回，若不存在则返回-1
 	public static int getIndex(int[] arr,int num){
 		int index=-1;
