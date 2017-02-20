@@ -1,2 +1,2 @@
-javac Day7.java
+javac Day8.java
 java Demo
