@@ -1,42 +1,37 @@
 .
 ├── git.tree
 ├── Java_starter
-│   ├── Java_stater.iml
 │   ├── newStart
-│   │   └── Outer.java
-│   ├── out
-│   │   └── production
-│   │       └── Java_stater
-│   │           ├── com
-│   │           │   └── stupid
-│   │           │       └── demo
-│   │           │           ├── Demo.class
-│   │           │           ├── HelloWorld.class
-│   │           │           ├── initTelphone.class
-│   │           │           ├── Main.class
-│   │           │           └── Telphone.class
-│   │           ├── Demo.class
-│   │           ├── HelloWorld.class
-│   │           ├── initTelphone.class
-│   │           ├── Main.class
-│   │           ├── Outer.class
-│   │           ├── Outer$Inner.class
-│   │           └── Telphone.class
-│   └── src
-│       └── com
-│           └── stupid
-│               └── demo
-│                   ├── Demo.java
-│                   ├── HelloWorld.java
-│                   ├── initTelphone.java
-│                   ├── Main.java
-│                   └── Telphone.java
+│   │   ├── caculate.java
+│   │   ├── Day6.java
+│   │   ├── Day7.java
+│   │   ├── Day8.java
+│   │   ├── deleteZeros.java
+│   │   ├── findMaxInArr.java
+│   │   ├── Outer.java
+│   │   ├── revChars.java
+│   │   └── run.sh
+│   └── oldCode
+│       ├── Demo.java
+│       ├── HelloWorld.java
+│       ├── initTelphone.java
+│       ├── Main.java
+│       └── Telphone.java
 ├── Python_starter
 │   ├── autoImgSpyder4meizitu.py
 │   ├── auto_spyder4jiandan.py
 │   ├── CheckIO.py
 │   ├── CollectiveIntelligence.py
 │   ├── doubanPics.py
+│   ├── fMRI_related
+│   │   ├── original_simplify.py
+│   │   ├── simplify.py
+│   │   └── TestData
+│   │       ├── all_fMRI.data
+│   │       ├── single.fMRI.data
+│   │       ├── sub010.data
+│   │       ├── sub011.data
+│   │       └── sub012.data
 │   ├── guess_the_number.py
 │   ├── Hello4Stupid.py
 │   ├── Spider
@@ -77,4 +72,4 @@
     ├── chang_names.sh
     └── test_array.sh
 
-16 directories, 61 files
+9 directories, 63 files
