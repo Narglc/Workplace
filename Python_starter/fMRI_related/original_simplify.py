@@ -12,8 +12,8 @@
 #Peak MNI coordinate region:  // Middle Occipital Gyrus // Occipital_Sup_R (aal)
 
 print "Simplification begin!"
-con = open('fMRI.result')
-out = open('accurate.result','a')
+con = open('TestData/single.fMRI.data')
+out = open('TestData/accurate.result','a')
 out.write('\nNewest Result:'+'\n')
 while True:
     line=con.readline()
