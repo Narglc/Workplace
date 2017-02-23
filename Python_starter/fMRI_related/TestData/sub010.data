@@ -1,0 +1,125 @@
+H:\fMRI_Analysis\fMRI_analysis_ver3.0\_analysis3.0_Once4all\_firstLevel_merge\byScans\sub010\spmT_0001.img,1
+Type: T
+df: 169
+Threshold
+-- p value = 4.3278e-05
+-- intensity = 4.0229
+-- cluster size = 15
+Number of clusters found: 10
+----------------------
+Cluster 1
+Number of voxels: 1369
+Peak MNI coordinate: 24 -90  15
+Peak MNI coordinate region:  // Right Cerebrum // Occipital Lobe // Middle Occipital Gyrus // White Matter // undefined // Occipital_Sup_R (aal)
+Peak intensity: 7.4877
+# voxels	structure
+ 1369	--TOTAL # VOXELS--
+  748	Occipital Lobe
+  613	Right Cerebrum
+  433	White Matter
+  372	Gray Matter
+  299	Left Cerebrum
+  280	Cerebellum Posterior Lobe
+  276	Declive
+  226	Left Cerebellum
+  216	Lingual Gyrus
+  205	Lingual_R (aal)
+  185	Cuneus
+  165	Cerebelum_6_L (aal)
+  161	Middle Occipital Gyrus
+  141	brodmann area 18
+  128	Right Cerebellum
+  127	Calcarine_L (aal)
+  112	Fusiform Gyrus
+  109	Temporal Lobe
+   97	brodmann area 19
+   87	Lingual_L (aal)
+   81	Fusiform_R (aal)
+   74	Calcarine_R (aal)
+   70	Cerebelum_6_R (aal)
+   70	Cerebellum Anterior Lobe
+   69	Occipital_Mid_R (aal)
+   65	Culmen
+   63	Middle Temporal Gyrus
+   61	Limbic Lobe
+   60	Cerebelum_Crus1_L (aal)
+   59	Fusiform_L (aal)
+   55	Inferior Occipital Gyrus
+   54	Posterior Cingulate
+   54	Temporal_Inf_R (aal)
+   53	Inter-Hemispheric
+   51	Occipital_Inf_R (aal)
+   45	brodmann area 30
+   45	Temporal_Mid_R (aal)
+   44	Cerebelum_Crus1_R (aal)
+   36	brodmann area 37
+   32	Sub-Gyral
+   28	Occipital_Inf_L (aal)
+   23	Occipital_Sup_R (aal)
+   19	brodmann area 17
+   19	Inferior Temporal Gyrus
+   13	brodmann area 39
+   11	Vermis_4_5 (aal)
+    9	Occipital_Sup_L (aal)
+    8	brodmann area 23
+    8	Cerebelum_4_5_L (aal)
+    8	Cerebelum_Crus2_L (aal)
+    8	Cuneus_R (aal)
+    8	Vermis_6 (aal)
+    7	Parahippocampa Gyrus
+    6	Occipital_Mid_L (aal)
+    5	Culmen of Vermis
+    4	brodmann area 31
+    3	Tuber
+    3	Vermis_7 (aal)
+    1	Cerebelum_4_5_R (aal)
+    1	Superior Occipital Gyrus
+    1	Superior Temporal Gyrus
+    1	Declive of Vermis
+----------------------
+Cluster 2
+Number of voxels: 15
+Peak MNI coordinate: -57 -57   9
+Peak MNI coordinate region:  // Left Cerebrum // Temporal Lobe // Middle Temporal Gyrus // Gray Matter // brodmann area 39 // Temporal_Mid_L (aal)
+Peak intensity: 4.4277
+# voxels	structure
+   15	--TOTAL # VOXELS--
+   15	Left Cerebrum
+   15	Temporal Lobe
+   12	Middle Temporal Gyrus
+   11	Temporal_Mid_L (aal)
+   10	Gray Matter
+    7	brodmann area 39
+    3	Superior Temporal Gyrus
+    3	White Matter
+    2	brodmann area 22
+    1	brodmann area 37
+----------------------
+Cluster 3
+Number of voxels: 77
+Peak MNI coordinate: -66 -18  18
+Peak MNI coordinate region:  // Left Cerebrum // Parietal Lobe // Postcentral Gyrus // Gray Matter // brodmann area 43 // Postcentral_L (aal)
+Peak intensity: 5.6601
+# voxels	structure
+   77	--TOTAL # VOXELS--
+   77	Left Cerebrum
+   61	Parietal Lobe
+   61	Postcentral Gyrus
+   52	Postcentral_L (aal)
+   39	Gray Matter
+   26	White Matter
+   13	Temporal Lobe
+   11	brodmann area 43
+   11	SupraMarginal_L (aal)
+   10	Transverse Temporal Gyrus
+    9	brodmann area 40
+    6	brodmann area 42
+    4	brodmann area 3
+    4	Precentral Gyrus
+    4	Rolandic_Oper_L (aal)
+    4	brodmann area 1
+    4	brodmann area 2
+    2	Temporal_Sup_L (aal)
+    1	brodmann area 22
+    1	Superior Temporal Gyrus
+    1	Frontal Lobe

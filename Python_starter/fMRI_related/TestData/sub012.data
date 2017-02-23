@@ -1,0 +1,100 @@
+H:\fMRI_Analysis\fMRI_analysis_ver3.0\_analysis3.0_Once4all\_firstLevel_merge\byScans\sub012\spmT_0001.img,1
+Type: T
+df: 169
+Threshold
+-- p value = 4.3278e-05
+-- intensity = 4.0229
+-- cluster size = 15
+Number of clusters found: 4
+----------------------
+Cluster 1
+Number of voxels: 968
+Peak MNI coordinate: 18 -90  24
+Peak MNI coordinate region:  // Right Cerebrum // Occipital Lobe // Cuneus // White Matter // undefined // Occipital_Sup_R (aal)
+Peak intensity: 8.3442
+# voxels	structure
+  968	--TOTAL # VOXELS--
+  866	Occipital Lobe
+  564	Right Cerebrum
+  440	White Matter
+  388	Cuneus
+  357	Gray Matter
+  310	Left Cerebrum
+  248	Middle Occipital Gyrus
+  226	Lingual Gyrus
+  197	brodmann area 18
+  144	Calcarine_L (aal)
+  116	Occipital_Mid_R (aal)
+  108	Lingual_R (aal)
+  101	Cuneus_R (aal)
+   92	Calcarine_R (aal)
+   91	brodmann area 19
+   77	Occipital_Sup_R (aal)
+   73	Occipital_Mid_L (aal)
+   68	Lingual_L (aal)
+   53	Cuneus_L (aal)
+   47	brodmann area 17
+   42	Cerebelum_6_L (aal)
+   41	Inter-Hemispheric
+   40	Occipital_Sup_L (aal)
+   32	Left Cerebellum
+   24	Declive
+   24	Cerebellum Posterior Lobe
+   20	Temporal_Mid_R (aal)
+   15	Cerebellum Anterior Lobe
+   15	Culmen
+   11	Middle Temporal Gyrus
+   10	Temporal Lobe
+    7	Cerebelum_6_R (aal)
+    7	Right Cerebellum
+    6	brodmann area 37
+    6	brodmann area 30
+    4	brodmann area 39
+    2	Vermis_6 (aal)
+    2	Occipital_Inf_R (aal)
+    2	Precuneus
+    1	Occipital_Inf_L (aal)
+    1	Fusiform Gyrus
+    1	brodmann area 31
+    1	Fusiform_R (aal)
+    1	Sub-Gyral
+    1	Parietal Lobe
+----------------------
+Cluster 2
+Number of voxels: 19
+Peak MNI coordinate: 54   3  42
+Peak MNI coordinate region:  // Right Cerebrum // Frontal Lobe // Middle Frontal Gyrus // Gray Matter // brodmann area 6 // Precentral_R (aal)
+Peak intensity: 5.2055
+# voxels	structure
+   19	--TOTAL # VOXELS--
+   19	Frontal Lobe
+   19	Precentral_R (aal)
+   19	Right Cerebrum
+   15	Gray Matter
+   14	Middle Frontal Gyrus
+    9	brodmann area 6
+    4	brodmann area 9
+    4	Inferior Frontal Gyrus
+    2	brodmann area 8
+    1	Precentral Gyrus
+    1	White Matter
+----------------------
+Cluster 3
+Number of voxels: 34
+Peak MNI coordinate: 24 -81  45
+Peak MNI coordinate region:  // Right Cerebrum // Parietal Lobe // Precuneus // Gray Matter // brodmann area 7 // Cuneus_R (aal)
+Peak intensity: 6.4787
+# voxels	structure
+   34	--TOTAL # VOXELS--
+   30	Right Cerebrum
+   30	Parietal Lobe
+   21	Precuneus
+   20	Gray Matter
+   18	brodmann area 7
+   15	Occipital_Sup_R (aal)
+   11	Parietal_Sup_R (aal)
+    8	Superior Parietal Lobule
+    6	Cuneus_R (aal)
+    2	brodmann area 19
+    2	Precuneus_R (aal)
+    2	White Matter
