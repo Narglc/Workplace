@@ -12,10 +12,12 @@
 │   │   ├── revChars.java
 │   │   └── run.sh
 │   └── oldCode
+│       ├── catchNum.java
 │       ├── Demo.java
 │       ├── HelloWorld.java
 │       ├── initTelphone.java
 │       ├── Main.java
+│       ├── Stupid.java
 │       └── Telphone.java
 ├── Python_starter
 │   ├── autoImgSpyder4meizitu.py
@@ -61,10 +63,11 @@
 │   │   ├── testall.py
 │   │   ├── testpart.py
 │   │   ├── test.py
-│   │   ├── tianya_zhuawen.py
-│   │   ├── 科大校运会.txt
-│   │   └── 科大校运会.txt~
+│   │   └── tianya_zhuawen.py
 │   ├── spyder_1page4Jiandan.py
+│   ├── spyder_Template
+│   │   ├── spyder.py
+│   │   └── test.sh
 │   ├── tk_test.py
 │   └── txt_spyder.py
 ├── README.md
@@ -72,4 +75,4 @@
     ├── chang_names.sh
     └── test_array.sh
 
-9 directories, 63 files
+10 directories, 65 files
