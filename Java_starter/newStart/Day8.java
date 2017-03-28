@@ -1,3 +1,4 @@
+/*
 //
 class Employee{
 	int id;
@@ -22,3 +23,7 @@ class Demo{
 		System.out.println("ID:"+e.id+" Name:"+e.name+" Age:"+e.age);
 	}
 }
+*/
+
+//Exercise
+
