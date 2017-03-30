@@ -3,14 +3,19 @@
 ├── Java_starter
 │   ├── newStart
 │   │   ├── caculate.java
+│   │   ├── Day10ex.java
 │   │   ├── Day6.java
 │   │   ├── Day7.java
 │   │   ├── Day8.java
 │   │   ├── deleteZeros.java
+│   │   ├── ExceptionEx.java
 │   │   ├── findMaxInArr.java
+│   │   ├── nar_trim.java
 │   │   ├── Outer.java
+│   │   ├── pack_test.java
 │   │   ├── revChars.java
-│   │   └── run.sh
+│   │   ├── run.sh
+│   │   └── xEx.java
 │   └── oldCode
 │       ├── catchNum.java
 │       ├── Demo.java
@@ -36,6 +41,8 @@
 │   │       └── sub012.data
 │   ├── guess_the_number.py
 │   ├── Hello4Stupid.py
+│   ├── LeetCode
+│   │   └── two_sum.py
 │   ├── Spider
 │   │   ├── 1.shtml
 │   │   ├── 2.shtml
@@ -75,4 +82,4 @@
     ├── chang_names.sh
     └── test_array.sh
 
-10 directories, 65 files
+11 directories, 71 files
