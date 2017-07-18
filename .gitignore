@@ -4,3 +4,8 @@
 #narglc:
 *.nar
 *.shtml
+
+#idea.pycharm.Eclipse
+*.xml
+*.iml
+.name
