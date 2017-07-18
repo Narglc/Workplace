@@ -1,6 +1,6 @@
 //编写一个函数，删除数组中的0，并返回
 import java.util.*;
-class Demo{
+class Demo9{
 	public static int[] deleteZero(int[] arr){
 		int len=0;
 		for(int i=0;i<arr.length;i++){

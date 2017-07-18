@@ -47,7 +47,7 @@ class Rectangle extends Figure{
 	}
 	
 	public double getLength(){
-		double Length=2(length+width);
+		double Length=2*(length+width);
 		return Length;
 	}
 }

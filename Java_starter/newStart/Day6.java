@@ -1,5 +1,5 @@
 //about array and function
-class Demo{
+class Demo6{
 	public static void main(String[] args){
 		System.out.println("Just remember the syntax of java.");
 		int[] arr1=new int[2];
