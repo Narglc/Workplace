@@ -34,7 +34,7 @@ class Caculator{
 	}
 }
 
-class Demo{
+class Demo1{
 	public static void main(String[] args){
 		Caculator c=new Caculator();
 		c.setNum1(23);

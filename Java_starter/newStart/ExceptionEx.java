@@ -4,7 +4,7 @@ class NoEnoughMoney extends Exception{
 	}
 }
 
-class Demo{
+class Demo4{
 	public static void main(String[] args) throws NoEnoughMoney{
 		int money=19;
 		eat(money);

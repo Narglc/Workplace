@@ -1,6 +1,6 @@
 //使用函数和数组实现寻找数组中的最大值的功能
 //两种排序算法：选择排序算法、冒泡排序算法。
-class Demo{
+class Demo328{
 	public static void main(String[] args){
 		int[] arr={23,3,45,56,34,55,66};
 		System.out.println(getMax(arr));

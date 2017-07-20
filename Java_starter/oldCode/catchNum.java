@@ -1,5 +1,5 @@
 import java.util.*;
-class Demo{
+class Demo8{
     public static void main(String[] args){
         Random random = new Random();
         int num =random.nextInt(10)+1;    // 1-10

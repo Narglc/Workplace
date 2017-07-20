@@ -1,4 +1,4 @@
-public class Test{
+public class Stupid{
     public static void main(String[] args){
         System.out.println("Nar");
         int score = 36;

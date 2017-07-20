@@ -24,7 +24,7 @@ public class Review_Day4 {
 	public static void main(String[] args) {
 		int[] arr={21,12,44,26,7,39,0};
 		System.out.println("原始数组为:"+Arrays.toString(arr));
-		Arrays.bi
+		//Arrays.bi
 		int target=440;
 		System.out.println("target的索引值为:"+getTarget(arr,target));
 	}

@@ -1,7 +1,7 @@
 //定义一个函数接受一个char类型的数组对象，然后翻转数组中的元素。
 //使用冒泡排序算法即可解决该问题。
 import java.util.*;
-class Demo{
+class Demo3{
 	public static void main(String[] args){
 		char[] arr={'a','b','c','d','e'};
 		revChars(arr);
