@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 
 int main(){
 	//同一行代码声明多个同一类型的变量
@@ -48,6 +49,10 @@ int main(){
 	std::cout<<nar<<"="<<int(nar)<<".\n";
 	std::cout<<A<<"="<<int(A)<<".\n";
 	std::cout<<add<<".\n";
+
+	std::string narString="qingc";
+	std::cout<<narString<<std::endl;
+	std::cout<<narString.size(); 
 
 	std::cin.get();
 
