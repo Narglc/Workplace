@@ -10,3 +10,6 @@
 *.iml
 .name
 run.sh
+
+#C++
+*.out
