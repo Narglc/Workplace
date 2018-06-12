@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1528728048 source:/home/narglc/Documents/Code_Blocks/First/ProjectStart/main.cpp
+	"person.h"
+
+1528727573 /home/narglc/Documents/Code_Blocks/First/ProjectStart/header.h
+
+1528725551 source:/home/narglc/Documents/Code_Blocks/First/ProjectStart/src.c
+
+1528728380 /home/narglc/Documents/Code_Blocks/First/ProjectStart/person.h
+	<iostream>
+	<string.h>
+
+1528728377 source:/home/narglc/Documents/Code_Blocks/First/ProjectStart/src.cpp
+	"person.h"
+
