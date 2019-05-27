@@ -20,3 +20,6 @@ run.sh
 
 #git self
 .gitignore
+
+#code::blocks
+/Code::Blocks/ProjectStart/bin

@@ -4,7 +4,7 @@ int main()
 {
 
     CPerson p;
-    p.setName("于邦雷");
+    p.setName("鲁门主");
     p.setAge(28);
     p.setIndex(511);
     p.setSalary(12000);
