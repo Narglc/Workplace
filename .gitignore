@@ -16,7 +16,7 @@ run.sh
 *.o
 
 #xCode project file
-/DataStruct/DataStruct.xcodeproj
+#/DataStruct/DataStruct.xcodeproj
 
 #git self
 .gitignore
