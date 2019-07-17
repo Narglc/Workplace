@@ -30,7 +30,17 @@ namespace SortTestHelper {
         return arr;
     }
     
-    template <typename T>
+    int* copyIntArray(int a[], int n)
+    {
+        int* arr = new int[n];
+//        for(int i = 0; i < n; i++)
+//            b[i] = a[i];
+        //直接使用copy()函数
+        copy(a, a+n, arr);
+        return arr;
+    }
+    
+    template<typename T>
     void printArray(T arr[], int num)
     {
         for(int i = 0; i < num; i++)
@@ -49,7 +59,7 @@ namespace SortTestHelper {
         return true;
     }
     
-    template <typename T>
+    template<typename T>
     void testSort(string sortName, void(*sort)(T[],int), T arr[], int n)
     {
         clock_t startTime = clock();

@@ -80,7 +80,6 @@ void FileDemo::WriteFileTimes(int times)
     if(fpOut)
     {
         fpOut<<times;
-        cout<<"write times."<<endl;
         fpOut.close();
     }
     else
