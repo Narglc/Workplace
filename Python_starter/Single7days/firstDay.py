@@ -11,14 +11,13 @@ x = int(x)
 y = int(y)
 
 if(x == 0 or y == 0):
-	print("("+str(x)+","+str(y)+")在坐标轴上")
+	res = "在坐标轴上"
 elif(x > 0 and y > 0):
-	print("("+str(x)+","+str(y)+")在第一象限内")
+	res = "在第一象限内"	
 elif(x < 0 and y > 0):
-	print("("+str(x)+","+str(y)+")在第二象限内")
+	res = "在第二象限内"	
 elif(x < 0 and y < 0):
-	print("("+str(x)+","+str(y)+")在第三象限内")
-elif(x > 0 and y < 0):
-	print("("+str(x)+","+str(y)+")在第四象限内")
-
-print("end..")
+	res = "在第三象限内"	
+else:
+	res = "在第四象限内"	
+print("("+str(x)+","+str(y)+")"+res)
