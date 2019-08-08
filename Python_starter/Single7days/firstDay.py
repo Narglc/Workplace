@@ -4,7 +4,6 @@
 print("Hello World!")
 
 # 二刷
-
 def whereThePoint():
 	x=raw_input("pls input x:")
 	y=raw_input("pls input y:")
@@ -26,9 +25,6 @@ def whereThePoint():
 			res = "在第四象限内"	
 		print("("+str(x)+","+str(y)+")"+res)
 
-# while(True):
-# 	whereThePoint()
-
 # 三刷
 def splitASentences(sentence):
 	# senList = sentence.split(' ')
@@ -44,7 +40,7 @@ def splitASentences(sentence):
 			leftIndex = index
 		else:
 			index = index + 1
-	list.append(sentence[leftIndex:-1])
+	list.append(sentence[leftIndex:])
 	return list
 
 def joinToASentences(list):
@@ -54,12 +50,16 @@ def joinToASentences(list):
 		sentence =  sentence + each + " "
 	return sentence[:-1]
 
-sentence = "I am not an gooooood conder"
-list1 = splitASentences(sentence)
-# list1 = sentence.split(' ')
-print('list is:')
-print(list1)
-print("sentence is:")
-print(joinToASentences(list1))
-
-
+if __name__ =="__main__":
+	# 二刷测试
+	count = 0
+	while(count<1):
+		whereThePoint()
+		count = count + 1
+	# 三刷测试
+	sentence = "I am not an gooooood conder"
+	list1 = splitASentences(sentence)
+	print('list is:')
+	print(list1)
+	print("sentence is:")
+	print(joinToASentences(list1))
