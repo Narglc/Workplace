@@ -57,7 +57,7 @@ if __name__ =="__main__":
 		whereThePoint()
 		count = count + 1
 	# 三刷测试
-	sentence = "I am not an gooooood conder"
+	sentence = "I am not an gooooood coder"
 	list1 = splitASentences(sentence)
 	print('list is:')
 	print(list1)
