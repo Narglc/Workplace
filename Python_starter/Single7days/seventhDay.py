@@ -6,6 +6,7 @@ html= 'http://wthrcdn.etouch.cn/weather_mini?city='
 from random import randint
 import math
 import requests				
+
 # 一刷
 def gen_random():
 	x = randint(1,100)
@@ -38,7 +39,9 @@ def search_weather(str):
 	req = requests.get(html+str)
 	req.encoding = 'utf-8'
 	print(req.text)
-	
+	dict_city = req.json()
+	print("------------")
+	print(dict_city['data'])
 
 
 if __name__ == "__main__":
