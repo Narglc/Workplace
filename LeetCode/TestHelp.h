@@ -67,7 +67,6 @@ namespace TestHelp{
 		cout << endl;
 	}
 
-
 }
 
 #endif

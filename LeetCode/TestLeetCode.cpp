@@ -53,12 +53,30 @@ void test_addTwoNumbers(Solution &solution)
 	TestHelp::print_LinkList(res);
 }
 
+void test_singleNumber(Solution &solution)
+{
+	vector<int> nums = {1,2,2,3,3};
+	cout << "The single one is --> " << solution.singleNumber(nums);
+}
+
+
+void test_findMedianSortedArrays(Solution &solution)
+{
+	vector<int> num1 = {1,3};
+	vector<int> num2 = {2};
+	//double res = solution.findMedianSortedArrays(num1,num2);
+	//cout << "Median --> " << num1.pop_back() << endl;
+}
+
 int main()
 {
 	Solution solution;
-
+#if 0
 	EXECUTE_TEST_DEMO(test_decompressRLElist,"1313. 解压缩编码列表")
 	EXECUTE_TEST_DEMO(test_matrixBlockSum,"1314. 矩阵区域和")
 	EXECUTE_TEST_DEMO(test_twoSum,"1. 两数之和 ")
 	EXECUTE_TEST_DEMO(test_addTwoNumbers,"2. 两数相加 ")
+#endif
+	EXECUTE_TEST_DEMO(test_singleNumber,"136. 只出现一次的数字")
+	EXECUTE_TEST_DEMO(test_findMedianSortedArrays,"2. 寻找两个有序数组的中位数")
 }

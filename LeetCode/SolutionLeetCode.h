@@ -57,6 +57,64 @@ public:
         return l1;
     }
 
+    /* 2. 寻找两个有序数组的中位数 */
+#if 0
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    	int size_nums1 = nums1.size();
+    	int size_nums2 = nums2.size();
+    	vector<int> res;
+    	int mid = (size_nums1 + size_nums2)/2;
+    	int count = 0;
+    	while(!nums1.empty()||!nums2.empty())
+    	{
+    		if(nums1[nums1.size()-1] > nums2[nums2.size()-1]) //.top() > nums2.top())
+    		{
+    			res.push_back(nums1.pop_back());
+    		}
+    		else
+    		{
+    			res.push_back(nums2.pop_back());
+    		}
+    	}
+    	while(!nums1.empty())
+    	{
+    		res.push_back(nums1.pop_back());
+    	}
+    	while(!nums2.empty())
+    	{
+    		res.push_back(nums2.pop_back());
+    	}
+
+    	if((size_nums2 + size_nums1)%2 == 0)
+    	{
+
+    		return (res[mid]+res[mid-1])/2;
+    	}
+    	else
+    	{
+    		return res[mid];
+    	}
+    }
+#endif
+
+	/* 136. 只出现一次的数字 */
+    int singleNumber(vector<int>& nums) {
+        map<int,int> last;
+        for(auto it:nums)
+        {
+            if(last.find(it) != last.end())
+            {
+                last.erase(it);
+            }
+            else
+            {
+                last[it] = 1;
+            }
+        }
+        return last.begin()->first;
+    }
+
+
 	/* 1313. 解压缩编码列表 */
     vector<int> decompressRLElist(vector<int>& nums) {
     	vector<int> res;
@@ -103,12 +161,6 @@ public:
         }
        	return res;
     }
-
-
-
-
-
-
 
 };
 
