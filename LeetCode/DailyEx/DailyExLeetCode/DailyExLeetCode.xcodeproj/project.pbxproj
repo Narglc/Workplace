@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE694756229EC4F500BB32AB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE694755229EC4F500BB32AB /* main.cpp */; };
-		FEE17637229EC5CD00C14331 /* dataStruct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEE17636229EC5CD00C14331 /* dataStruct.cpp */; };
+		FEB06A1F24114F270012281C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEB06A1E24114F270012281C /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FE694750229EC4F400BB32AB /* CopyFiles */ = {
+		FEB06A1924114F270012281C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,14 +23,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FE694752229EC4F400BB32AB /* DataStruct */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStruct; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE694755229EC4F500BB32AB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		FEE17635229EC5CD00C14331 /* dataStruct.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dataStruct.hpp; sourceTree = "<group>"; };
-		FEE17636229EC5CD00C14331 /* dataStruct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dataStruct.cpp; sourceTree = "<group>"; };
+		FEB06A1B24114F270012281C /* DailyExLeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DailyExLeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB06A1E24114F270012281C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FEB06A2524114F7E0012281C /* DailyEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyEx.h; sourceTree = "<group>"; };
+		FEB06A26241150CC0012281C /* TestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE69474F229EC4F400BB32AB /* Frameworks */ = {
+		FEB06A1824114F270012281C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,97 +40,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE694749229EC4F400BB32AB = {
+		FEB06A1224114F270012281C = {
 			isa = PBXGroup;
 			children = (
-				FE694754229EC4F400BB32AB /* DataStruct */,
-				FE694753229EC4F400BB32AB /* Products */,
+				FEB06A1D24114F270012281C /* DailyExLeetCode */,
+				FEB06A1C24114F270012281C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FE694753229EC4F400BB32AB /* Products */ = {
+		FEB06A1C24114F270012281C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE694752229EC4F400BB32AB /* DataStruct */,
+				FEB06A1B24114F270012281C /* DailyExLeetCode */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE694754229EC4F400BB32AB /* DataStruct */ = {
+		FEB06A1D24114F270012281C /* DailyExLeetCode */ = {
 			isa = PBXGroup;
 			children = (
-				FEE17636229EC5CD00C14331 /* dataStruct.cpp */,
-				FEE17635229EC5CD00C14331 /* dataStruct.hpp */,
-				FE694755229EC4F500BB32AB /* main.cpp */,
+				FEB06A1E24114F270012281C /* main.cpp */,
+				FEB06A2524114F7E0012281C /* DailyEx.h */,
+				FEB06A26241150CC0012281C /* TestHelper.h */,
 			);
-			path = DataStruct;
+			path = DailyExLeetCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE694751229EC4F400BB32AB /* DataStruct */ = {
+		FEB06A1A24114F270012281C /* DailyExLeetCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE694759229EC4F500BB32AB /* Build configuration list for PBXNativeTarget "DataStruct" */;
+			buildConfigurationList = FEB06A2224114F270012281C /* Build configuration list for PBXNativeTarget "DailyExLeetCode" */;
 			buildPhases = (
-				FE69474E229EC4F400BB32AB /* Sources */,
-				FE69474F229EC4F400BB32AB /* Frameworks */,
-				FE694750229EC4F400BB32AB /* CopyFiles */,
+				FEB06A1724114F270012281C /* Sources */,
+				FEB06A1824114F270012281C /* Frameworks */,
+				FEB06A1924114F270012281C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DataStruct;
-			productName = DataStruct;
-			productReference = FE694752229EC4F400BB32AB /* DataStruct */;
+			name = DailyExLeetCode;
+			productName = DailyExLeetCode;
+			productReference = FEB06A1B24114F270012281C /* DailyExLeetCode */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FE69474A229EC4F400BB32AB /* Project object */ = {
+		FEB06A1324114F270012281C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Narglc;
 				TargetAttributes = {
-					FE694751229EC4F400BB32AB = {
-						CreatedOnToolsVersion = 10.2.1;
+					FEB06A1A24114F270012281C = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = FE69474D229EC4F400BB32AB /* Build configuration list for PBXProject "DataStruct" */;
+			buildConfigurationList = FEB06A1624114F270012281C /* Build configuration list for PBXProject "DailyExLeetCode" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = FE694749229EC4F400BB32AB;
-			productRefGroup = FE694753229EC4F400BB32AB /* Products */;
+			mainGroup = FEB06A1224114F270012281C;
+			productRefGroup = FEB06A1C24114F270012281C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE694751229EC4F400BB32AB /* DataStruct */,
+				FEB06A1A24114F270012281C /* DailyExLeetCode */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FE69474E229EC4F400BB32AB /* Sources */ = {
+		FEB06A1724114F270012281C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE17637229EC5CD00C14331 /* dataStruct.cpp in Sources */,
-				FE694756229EC4F500BB32AB /* main.cpp in Sources */,
+				FEB06A1F24114F270012281C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FE694757229EC4F500BB32AB /* Debug */ = {
+		FEB06A2024114F270012281C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -163,7 +162,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -182,7 +180,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -190,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		FE694758229EC4F500BB32AB /* Release */ = {
+		FEB06A2124114F270012281C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +220,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -235,26 +232,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		FE69475A229EC4F500BB32AB /* Debug */ = {
+		FEB06A2324114F270012281C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		FE69475B229EC4F500BB32AB /* Release */ = {
+		FEB06A2424114F270012281C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -263,25 +258,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE69474D229EC4F400BB32AB /* Build configuration list for PBXProject "DataStruct" */ = {
+		FEB06A1624114F270012281C /* Build configuration list for PBXProject "DailyExLeetCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE694757229EC4F500BB32AB /* Debug */,
-				FE694758229EC4F500BB32AB /* Release */,
+				FEB06A2024114F270012281C /* Debug */,
+				FEB06A2124114F270012281C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE694759229EC4F500BB32AB /* Build configuration list for PBXNativeTarget "DataStruct" */ = {
+		FEB06A2224114F270012281C /* Build configuration list for PBXNativeTarget "DailyExLeetCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE69475A229EC4F500BB32AB /* Debug */,
-				FE69475B229EC4F500BB32AB /* Release */,
+				FEB06A2324114F270012281C /* Debug */,
+				FEB06A2424114F270012281C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FE69474A229EC4F400BB32AB /* Project object */;
+	rootObject = FEB06A1324114F270012281C /* Project object */;
 }

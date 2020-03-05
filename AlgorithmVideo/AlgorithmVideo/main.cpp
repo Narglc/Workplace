@@ -52,9 +52,8 @@ void insertSort(T arr[], int num)
     }
 }
 
-
-int main(int argc, const char * argv[]) {
-    
+void SearchDemo()
+{
     int intArr[10] = {10,9,8,7,6,5,4,3,2,1};
     insertSort(intArr, 10);
     SortTestHelper::printArray(intArr,10);
@@ -73,17 +72,31 @@ int main(int argc, const char * argv[]) {
     SortTestHelper::printArray(st, 4);
     
     // 整理出SorTestHelper类后
-    int n = 100000;
+    int n = 10000;
     int *arr1 = SortTestHelper::generateRandomArray(n, 0, n);
     int *arr2 = SortTestHelper::copyIntArray(arr1, n);
 //    selectionSort(arrRandom, n);
 //    cout << "自动生成数组排序(" << n << "):" << endl;
 //    SortTestHelper:printArray(arrRandom, n);
     SortTestHelper::testSort("Selection Sort", selectionSort, arr1, n);
-    SortTestHelper::testSort("Insert Sort", insertSort, arr2, n);
+    // 耗时太久，屏蔽掉
+//    SortTestHelper::testSort("Insert Sort", insertSort, arr2, n);
     
     delete[] arr1;
     delete[] arr2;
-    
+}
+
+void BingchaDemo()
+{
+    cout << "Got Here" << endl;
+}
+
+
+int main(int argc, const char * argv[])
+{
+    PRINTLINE
+    SearchDemo();
+    PRINTLINE
+    BingchaDemo();
     return 0;
 }

@@ -27,6 +27,7 @@
 		FE4E1A4122D6099100D7AD62 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FE4E1A4822D6108800D7AD62 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		FE4E1A4922D6164200D7AD62 /* SortTestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortTestHelper.h; sourceTree = "<group>"; };
+		FEB06A112411398D0012281C /* UnionFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 				FE4E1A4122D6099100D7AD62 /* main.cpp */,
 				FE4E1A4822D6108800D7AD62 /* Student.h */,
 				FE4E1A4922D6164200D7AD62 /* SortTestHelper.h */,
+				FEB06A112411398D0012281C /* UnionFind.h */,
 			);
 			path = AlgorithmVideo;
 			sourceTree = "<group>";

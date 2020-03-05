@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da0ded6d-acb6-45b3-b5e5-08ad1e1e0bec" name="Default" comment="change enviroment.">
-      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cWorld/cWorld.xcodeproj/project.xcworkspace/xcuserdata/narglc.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../cWorld/cWorld.xcodeproj/project.xcworkspace/xcuserdata/narglc.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataStruct/DataStruct.xcodeproj/project.xcworkspace/xcuserdata/narglc.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../DataStruct/DataStruct.xcodeproj/project.xcworkspace/xcuserdata/narglc.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetCode/DataStructLeetCode.h" beforeDir="false" afterPath="$PROJECT_DIR$/../LeetCode/DataStructLeetCode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetCode/SolutionLeetCode.h" beforeDir="false" afterPath="$PROJECT_DIR$/../LeetCode/SolutionLeetCode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetCode/TestHelp.h" beforeDir="false" afterPath="$PROJECT_DIR$/../LeetCode/TestHelp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetCode/TestLeetCode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LeetCode/TestLeetCode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetCode/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetCode/test.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetCode/test.dSYM/Contents/Resources/DWARF/test" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
