@@ -9,6 +9,8 @@
 
 #include "DailyEx.h"
 #include "TestHelper.h"
+
+/* 1103 分糖果*/
 void distributeCandies_1103()
 {
     Solution solution = Solution();
@@ -20,6 +22,7 @@ void distributeCandies_1103()
 
 void test()
 {
+    // 生成5个2
     vector<int> arr(5,2);
     TestHelper::printVector(arr);
 }
