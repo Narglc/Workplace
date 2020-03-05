@@ -7,22 +7,28 @@
 //  Copyright © 2020 Narglc. All rights reserved.
 //
 
-#include <iostream>
 #include "DailyEx.h"
 #include "TestHelper.h"
 void distributeCandies_1103()
 {
     Solution solution = Solution();
-    vector<int> res = solution.distributeCandies(10,3);
+    vector<int> res = solution.distributeCandies(7,4);
     TestHelper::printVector(res);
-    
+    res = solution.distributeCandies(10,3);
+    TestHelper::printVector(res);
 }
 
+void test()
+{
+    vector<int> arr(5,2);
+    TestHelper::printVector(arr);
+}
 
 
 int main(int argc, const char * argv[]) {
     PRINTLINE
     distributeCandies_1103();
     PRINTLINE
+    test();
     return 0;
 }
