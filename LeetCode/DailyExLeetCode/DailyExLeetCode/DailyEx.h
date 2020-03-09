@@ -71,31 +71,54 @@ public:
             }
         }
         return max;
-#else
+#elifdefine METHOD_SECOND
         // Method 2: 使用栈
         stack<int> stackStock;
         int max = 0;
         int bottom = 0;
         for(int i = 0; i < prices.size(); i++)
         {
-            if(stackStock.size() == 0 || stackStock.top() < prices[i])
+            if(stackStock.size() == 0 || stackStock.top() <= prices[i])
                 stackStock.push(prices[i]);
-            if(stackStock.top() > prices[i])
+            else if(stackStock.top() > prices[i])
             {
-                stackStock.pop();
+                while(stackStock.size()>0 && stackStock.top() > prices[i])
+                    stackStock.pop();
                 stackStock.push(prices[i]);
             }
             if(stackStock.size() == 1)
                 bottom = stackStock.top();
 
-            if(stackStock.size() > 2)
+            if(stackStock.size() >= 2)
             {
                 if(stackStock.top() - bottom > max)
                     max = stackStock.top() - bottom;
+                if(stackStock.top() - bottom == 0)
+                {
+                    while(stackStock.size() != 1)
+                        stackStock.pop();
+                }
             }
         }
+//        while(stackStock.size() > 0)
+//        {
+//            int cur = stackStock.top();
+//            cout << cur << " ";
+//            stackStock.pop();
+//            cout << endl;
+//        }
         return max;
-        
+#else
+        // 方法3:官方答案
+        int inf = 1e9;
+        int minprice = inf, maxprofit = 0;
+        for (int price: prices) {
+            maxprofit = max(maxprofit, price - minprice);
+            minprice = min(price, minprice);
+        }
+        cout << "offical..."<< endl;
+        return maxprofit;
+
 #endif
        
     }
