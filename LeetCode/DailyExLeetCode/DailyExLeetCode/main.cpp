@@ -30,12 +30,12 @@ void test()
 /* 121 买卖股票的最佳时机 */
 void maxProfit_121()
 {
-    vector<int> prices = {7,6,4,3,1};//{7,1,5,3,6,4};
+    vector<int> prices = {}; //{3,3,5,0,0,3,1,4};//{2,1,2,1,0,1,2};//{1,2};//{7,1,5,3,6,4};
     Solution solution = Solution();
-    cout << "Best Cost: " << solution.maxProfit(prices) << endl;
+    int res = solution.maxProfit(prices);
+    cout << "Best Cost: " << res << endl;
     
 }
-
 
 
 int main(int argc, const char * argv[]) {
