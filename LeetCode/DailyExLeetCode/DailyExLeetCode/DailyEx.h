@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <vector>
+#include <stack>
 #include "TestHelper.h"
 using namespace std;
 
@@ -53,6 +54,51 @@ public:
         return res;
     }
 #endif
+    
+    
+    int maxProfit(vector<int>& prices) {
+        // Method 1: 暴力破解
+#ifdef METHOD_FIRST
+        int max = 0;
+        int diff = 0;
+        for(int i = 0; i < prices.size(); i++)
+        {
+            for(int j = i + 1; j < prices.size(); j++)
+            {
+                diff = prices[j] - prices[i];
+                if(diff > 0  && diff > max)
+                    max = diff;
+            }
+        }
+        return max;
+#else
+        // Method 2: 使用栈
+        stack<int> stackStock;
+        int max = 0;
+        int bottom = 0;
+        for(int i = 0; i < prices.size(); i++)
+        {
+            if(stackStock.size() == 0 || stackStock.top() < prices[i])
+                stackStock.push(prices[i]);
+            if(stackStock.top() > prices[i])
+            {
+                stackStock.pop();
+                stackStock.push(prices[i]);
+            }
+            if(stackStock.size() == 1)
+                bottom = stackStock.top();
+
+            if(stackStock.size() > 2)
+            {
+                if(stackStock.top() - bottom > max)
+                    max = stackStock.top() - bottom;
+            }
+        }
+        return max;
+        
+#endif
+       
+    }
 };
 
 

@@ -27,11 +27,23 @@ void test()
     TestHelper::printVector(arr);
 }
 
+/* 121 买卖股票的最佳时机 */
+void maxProfit_121()
+{
+    vector<int> prices = {7,6,4,3,1};//{7,1,5,3,6,4};
+    Solution solution = Solution();
+    cout << "Best Cost: " << solution.maxProfit(prices) << endl;
+    
+}
+
+
 
 int main(int argc, const char * argv[]) {
     PRINTLINE
     distributeCandies_1103();
     PRINTLINE
     test();
+    PRINTLINE
+    maxProfit_121();
     return 0;
 }
