@@ -37,6 +37,17 @@ void maxProfit_121()
     
 }
 
+/* 543. 二叉树的直径 */
+void diameterOfBinaryTree_543()
+{
+    //int arr[] = {4,-7,-3,null,null,-9,-3,9,-7,-4,null,6,null,-6,-6,null,null,0,6,5,null,9,null,null,-1,-4,null,null,null,-2};
+    TreeNode *root = NULL;
+    
+    Solution solution = Solution();
+    int res = solution.diameterOfBinaryTree(root);
+    cout << "maxDiameter : " << res << endl;
+}
+
 
 int main(int argc, const char * argv[]) {
     PRINTLINE
@@ -45,5 +56,7 @@ int main(int argc, const char * argv[]) {
     test();
     PRINTLINE
     maxProfit_121();
+    PRINTLINE
+    diameterOfBinaryTree_543();
     return 0;
 }

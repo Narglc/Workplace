@@ -13,6 +13,7 @@
 #include <vector>
 #include <stack>
 #include "TestHelper.h"
+#include "LeetCodeStruct.h"
 using namespace std;
 
 #define PRINTLINE cout << "-------------------------" << endl;
@@ -120,7 +121,31 @@ public:
         return maxprofit;
 
 #endif
-       
+    }
+    
+    //计算深度 需进一步精简！！！ and LeetCode树的读取方法
+    int depthOfBinaryTree(TreeNode* root)
+    {
+        if(root == NULL || (root->left == NULL && root->right == NULL))
+            return 0;
+        else if(root->left == NULL)
+            return depthOfBinaryTree(root->right) + 1;
+        else if(root->right == NULL)
+            return depthOfBinaryTree(root->left) + 1;
+        else
+            return max(depthOfBinaryTree(root->right) + 1, depthOfBinaryTree(root->left) + 1);
+    }
+
+    int diameterOfBinaryTree(TreeNode* root) {
+        int left = 0;
+        int right = 0;
+        if(root == NULL)
+            return 0;
+        if(root->left != NULL)
+            left =  depthOfBinaryTree(root->left) + 1;
+        if(root->right != NULL)
+            right = depthOfBinaryTree(root->right) + 1;
+        return max(left + right, max(diameterOfBinaryTree(root->left),diameterOfBinaryTree(root->right)));
     }
 };
 
