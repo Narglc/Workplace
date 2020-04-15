@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <stack>
 #include "TestHelper.h"
 #include "LeetCodeStruct.h"
@@ -146,6 +147,96 @@ public:
         if(root->right != NULL)
             right = depthOfBinaryTree(root->right) + 1;
         return max(left + right, max(diameterOfBinaryTree(root->left),diameterOfBinaryTree(root->right)));
+    }
+    
+    bool validateStackSequences(vector<int>& pushed, vector<int>& popped)
+    {
+        if(pushed.size() != popped.size())
+            return false;
+
+        stack<int> tmpStack;
+        int indexPush = 0;
+        for(auto popIter:popped)
+        {
+            while(indexPush < pushed.size() && popIter != pushed[indexPush])
+            {
+                if(!tmpStack.empty() && tmpStack.top() == popIter)
+                    break;
+                tmpStack.push(pushed[indexPush]);
+                indexPush++;
+            }
+
+            if(indexPush < pushed.size() && popIter == pushed[indexPush])
+            {
+                indexPush++;
+                continue;
+            }
+
+            if(!tmpStack.empty() && tmpStack.top() == popIter)
+            {
+                tmpStack.pop();
+                continue;
+            }
+        }
+
+        if(tmpStack.empty())
+            return true;
+        else
+            return false;
+    }
+    
+    /* 面试题32 - I. 从上到下打印二叉树 */
+    vector<int> levelOrder(TreeNode* root) {
+        vector<int> res;
+        if(root == NULL)
+            return res;
+        queue<TreeNode*> queueTree;
+        queueTree.push(root);
+        while(!queueTree.empty())
+        {
+            TreeNode* curNode = queueTree.front();
+            if(curNode->left != NULL)
+                queueTree.push(curNode->left);
+            if(curNode->right != NULL)
+                queueTree.push(curNode->right);
+            res.push_back(curNode->val);
+            queueTree.pop();
+        }
+        return res;
+    }
+    
+    /* 面试题32 - II. 从上到下打印二叉树 II */
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> res;
+
+        vector<int> LevelRes;
+        if(root == NULL)
+            return res;
+        queue<TreeNode*> queueTree;
+        queueTree.push(root);
+        queueTree.push(NULL);
+        while(!queueTree.empty())
+        {
+            TreeNode* curNode = queueTree.front();
+            if(curNode == NULL)
+            {
+                res.push_back(LevelRes);
+                LevelRes.clear();
+
+                if(queueTree.size() == 1)
+                    break;
+                queueTree.push(NULL);
+                queueTree.pop();
+                continue;
+            }
+            if(curNode->left != NULL)
+                queueTree.push(curNode->left);
+            if(curNode->right != NULL)
+                queueTree.push(curNode->right);
+            LevelRes.push_back(curNode->val);
+            queueTree.pop();
+        }
+        return res;
     }
 };
 

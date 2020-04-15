@@ -48,6 +48,46 @@ void diameterOfBinaryTree_543()
     cout << "maxDiameter : " << res << endl;
 }
 
+/* 面试题31. 栈的压入、弹出序列 */
+void validateStackSequences_Offer31()
+{
+    vector<int> pushed = {1,2,3,4,5};
+    vector<int> popped = {4,5,3,2,1};
+    Solution solution = Solution();
+    int res = solution.validateStackSequences(pushed, popped);
+    cout << "validate : " << res << endl;
+    
+    vector<int> pushed2 = {2,1,3}; //{1,2,3,4,5};
+    vector<int> popped2 = {1,2};//{4,3,5,1,2};
+    int res2 = solution.validateStackSequences(pushed2, popped2);
+    cout << "validate : " << res2 << endl;
+    
+}
+
+void demoQueue()
+{
+    queue<TreeNode*> queueList;
+    TreeNode* curNode = new TreeNode(23);
+    queueList.push(curNode);
+    TreeNode* curNode2 = new TreeNode(24);
+    queueList.push(curNode2);
+    queueList.push(NULL);
+    TreeNode* curNode3 = new TreeNode(24);
+    queueList.push(curNode3);
+    
+    while(!queueList.empty())
+    {
+        if(queueList.front() != NULL)
+            cout << " ++ " << endl;
+        else
+            cout << " -- " << endl;
+        queueList.pop();
+    }
+    
+    cout << "size:" << queueList.size() << endl;
+    
+    
+}
 
 int main(int argc, const char * argv[]) {
     PRINTLINE
@@ -58,5 +98,9 @@ int main(int argc, const char * argv[]) {
     maxProfit_121();
     PRINTLINE
     diameterOfBinaryTree_543();
+    PRINTLINE
+    validateStackSequences_Offer31();
+    PRINTLINE
+    demoQueue();
     return 0;
 }
