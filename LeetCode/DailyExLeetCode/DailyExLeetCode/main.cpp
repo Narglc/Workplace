@@ -9,6 +9,7 @@
 
 #include "DailyEx.h"
 #include "TestHelper.h"
+#include<cmath>
 
 /* 1103 分糖果*/
 void distributeCandies_1103()
@@ -89,7 +90,38 @@ void demoQueue()
     
 }
 
+// Test Demo
+void testVecIter()
+{
+    vector<int> vec = {1,2,3,4,5,6,7,8,9};
+    auto it = find(vec.begin(), vec.end(), 1);
+    vector<int> left(vec.begin(), it);
+    vector<int> right(it+1, vec.end());
+    cout << "left:";
+    TestHelper::printVector(left);
+    cout << "right:";
+    TestHelper::printVector(right);
+    
+    string strA = "abcdefgh";
+    cout << strA.substr(2) << endl;
+    cout << strA.substr(2) + strA.substr(0,2) << endl;
+    cout << strA.length() << endl;
+}
+
+
+void demoAnother()
+{
+    string testStr = "hEllu";
+    Solution solution = Solution();
+    size_t res = solution.getIndexFromHead(testStr, 2);
+    cout << "index: " << res << "--" << testStr[res] << endl;
+    string resStr = solution.reverseVowels(testStr);
+    cout << "res:" << resStr << endl;;
+    cout << pow(10,3) << endl;
+}
+
 int main(int argc, const char * argv[]) {
+#if 0
     PRINTLINE
     distributeCandies_1103();
     PRINTLINE
@@ -102,5 +134,9 @@ int main(int argc, const char * argv[]) {
     validateStackSequences_Offer31();
     PRINTLINE
     demoQueue();
-    return 0;
+#endif
+    PRINTLINE
+    testVecIter();
+    demoAnother();
+    return 328;
 }

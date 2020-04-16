@@ -186,7 +186,8 @@ public:
     }
     
     /* 面试题32 - I. 从上到下打印二叉树 */
-    vector<int> levelOrder(TreeNode* root) {
+    vector<int> levelOrder(TreeNode* root)
+    {
         vector<int> res;
         if(root == NULL)
             return res;
@@ -206,7 +207,8 @@ public:
     }
     
     /* 面试题32 - II. 从上到下打印二叉树 II */
-    vector<vector<int>> levelOrder(TreeNode* root) {
+    vector<vector<int>> levelOrder_II(TreeNode* root)
+    {
         vector<vector<int>> res;
 
         vector<int> LevelRes;
@@ -238,6 +240,138 @@ public:
         }
         return res;
     }
+    
+    /* 面试题07 重建二叉树 */
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        if(preorder.size() != inorder.size() || preorder.empty() || inorder.empty())
+            return NULL;
+        TreeNode* head = new TreeNode(preorder[0]);
+        auto it = find(inorder.begin(), inorder.end(), preorder[0]);
+        if(it != inorder.end())
+        {
+            vector<int> sonLeftInOrder(inorder.begin(), it);
+            vector<int> sonRightInOrder(it+1, inorder.end());
+
+            vector<int> sonLeftPreOrder(preorder.begin()+1, preorder.begin()+1+sonLeftInOrder.size());
+            vector<int> sonRightPreOrder(preorder.begin()+1+sonLeftInOrder.size(), preorder.end());
+
+            head->left = buildTree(sonLeftPreOrder, sonLeftInOrder);
+            head->right = buildTree(sonRightPreOrder, sonRightInOrder);
+        }
+        else
+        {
+            return NULL;
+        }
+        return head;
+    }
+  
+    /* 二叉树到下一个结点 */
+    void InOrderTraversal(TreeLinkNode *pNode, vector<TreeLinkNode*> &allNum)
+    {
+        if(pNode == NULL)
+            return;
+
+        InOrderTraversal(pNode->left, allNum);
+        allNum.push_back(pNode);
+        InOrderTraversal(pNode->right, allNum);
+    }
+    
+    
+    TreeLinkNode* GetNext(TreeLinkNode* pNode)
+    {
+        vector<TreeLinkNode*> allNum;
+        InOrderTraversal(pNode->next, allNum);
+        
+        auto it = allNum.begin();
+        for(; it != allNum.end()-1 ; )
+        {
+            if((*it) == pNode)
+                return *(++it);
+            else
+                it++;
+        }
+        return NULL;
+    }
+    
+    /* 面试题27. 二叉树的镜像 */
+    TreeNode* mirrorTree(TreeNode* root) {
+        if(root == NULL)
+            return NULL;
+        
+        if(root->left != NULL)
+            mirrorTree(root->left);
+        if(root->right != NULL)
+            mirrorTree(root->right);
+        
+        // TreeNode* tmp = root->left;
+        // root->left = root->right;
+        // root->right = tmp;
+        swap(root->left, root->right);
+        
+        return root;
+    }
+    
+    /* 345. 反转字符串中的元音字母 */
+    size_t getIndexFromHead(string &s, size_t i)
+    {
+        for(;i < (s.length() - 1) ; i++)
+        {
+            if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i'|| s[i] == 'o'|| s[i] == 'u'
+             || s[i] == 'A'|| s[i] == 'E'|| s[i] == 'I'|| s[i] == 'O'|| s[i] == 'U')
+                return i;
+        }
+        return i;
+    }
+
+    size_t getIndexFromTail(string &s, size_t i)
+    {
+        for(;i > 0; i--)
+        {
+            if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i'|| s[i] == 'o'|| s[i] == 'u'
+             || s[i] == 'A'|| s[i] == 'E'|| s[i] == 'I'|| s[i] == 'O'|| s[i] == 'U')
+                return i;
+        }
+        return i;
+    }
+
+    string reverseVowels(string s) {
+        if(s.length() <= 1)
+            return s;
+        size_t i = 0;
+        size_t j = s.size() - 1;
+        while(1)
+        {
+            i = getIndexFromHead(s,i);
+            j = getIndexFromTail(s,j);
+            if(i > j)
+                break;
+            swap(s[i++],s[j--]);
+        }
+        return s;
+    }
+    
+    /* 面试题22. 链表中倒数第k个节点 */
+    ListNode* getKthFromEnd(ListNode* head, int k) {
+        int num = 0;
+        ListNode* pCur = head;
+        while(pCur != NULL)
+        {
+            num++;
+            pCur = pCur->next;
+        }
+        int foundNum = num + 1 - k;
+        num = 1;
+        while(head != NULL)
+        {
+            if(num == foundNum)
+                return head;
+            head = head->next;
+            num++;
+        }
+        return NULL;
+    }
+    
+    
 };
 
 
