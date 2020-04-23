@@ -379,14 +379,10 @@ public:
             if(S[i] == ' ')
                 countSpace++;
         }
-//        S[S.length()+1] = '\0';
+
         size_t newLength = length + countSpace*2;
+        S[newLength] = '\0';
         size_t newIndex = newLength - 1;
-        
-//        while(newLength < S.length())
-//        {
-//            S[newLength++] = ' ';
-//        }
 
         size_t oldIndex = length - 1;
         while(newIndex != oldIndex)// && newIndex != 0 && oldIndex !=0)
