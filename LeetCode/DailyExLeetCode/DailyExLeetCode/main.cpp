@@ -120,6 +120,54 @@ void demoAnother()
     cout << pow(10,3) << endl;
 }
 
+void demoreplaceSpaces()
+{
+    string input = "ds sdfs afs sdfa dfssf asdf              ";//"               ";//"I am good             ";
+    cout << "str len: " << input.length() << endl;
+    int length = 27; //5;13;
+    Solution solution = Solution();
+    string out = solution.replaceSpaces(input, length);
+    cout << "out:" << out << endl;
+
+}
+
+void demoReverseList()
+{
+    //1->2->3->4->5->NULL
+    ListNode* head = new ListNode(1);
+    ListNode* curNode = head;
+    curNode->next = new ListNode(2);
+//    curNode = curNode->next;
+//    curNode->next = new ListNode(3);
+//    curNode = curNode->next;
+//    curNode->next = new ListNode(4);
+//    curNode = curNode->next;
+//    curNode->next = new ListNode(5);
+    curNode = curNode->next;
+    curNode->next = NULL;
+    
+    curNode = head;
+    while(curNode != NULL)
+    {
+        cout << curNode->val << "->";
+        curNode = curNode->next;
+    }
+    
+    Solution solution = Solution();
+    ListNode *newHead = solution.reverseList(head);
+
+    cout << "\nnew Result:" << endl;
+    curNode = newHead;
+    while(curNode != NULL)
+    {
+        cout << curNode->val << "->";
+        curNode = curNode->next;
+    }
+    
+    
+    
+}
+
 int main(int argc, const char * argv[]) {
 #if 0
     PRINTLINE
@@ -138,5 +186,7 @@ int main(int argc, const char * argv[]) {
     PRINTLINE
     testVecIter();
     demoAnother();
-    return 328;
+    demoreplaceSpaces();
+    demoReverseList();
+    return 66;
 }
