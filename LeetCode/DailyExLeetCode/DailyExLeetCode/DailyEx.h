@@ -371,6 +371,57 @@ public:
         return NULL;
     }
     
+    /* 面试题 01.03. URL化 */
+    string replaceSpaces(string S, int length) {
+        size_t countSpace = 0;
+        for(size_t i = 0; i < length; i++)
+        {
+            if(S[i] == ' ')
+                countSpace++;
+        }
+
+        size_t newLength = length + countSpace*2;
+        S[newLength] = '\0';
+        size_t newIndex = newLength - 1;
+
+        size_t oldIndex = length - 1;
+        while(newIndex != oldIndex)// && newIndex != 0 && oldIndex !=0)
+        {
+            if(S[oldIndex] == ' ')
+            {
+                S[newIndex--] = '0';
+                S[newIndex--] = '2';
+                S[newIndex--] = '%';
+            }
+            else
+            {
+                S[newIndex] = S[oldIndex];
+                newIndex--;
+                
+            }
+            oldIndex--;
+        }
+        return S;
+    }
+    
+    /* 面试题24. 反转链表 */
+    ListNode* reverseList(ListNode* head) {
+        if(head == NULL || head->next == NULL)
+            return head;
+        ListNode* preNode = head;
+        ListNode* curNode = head->next;
+        head->next = NULL;
+        ListNode* tmpNode = NULL;
+        while(curNode->next != NULL)
+        {
+            tmpNode = curNode->next;
+            curNode->next = preNode;
+            preNode = curNode;
+            curNode = tmpNode;
+        }
+        curNode->next = preNode;
+        return curNode;
+    }
     
 };
 
