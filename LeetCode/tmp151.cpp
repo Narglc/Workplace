@@ -111,6 +111,51 @@ void demoreplaceSpaces()
 	
 }
 
+#define HASH_TABLE_SIZE 256
+#define HASH_TABLE_SIZE 256  
+bool canPermutePalindrome(string s) 
+{
+    /* Method 1
+    map<char,int> tmpMap;
+    for(size_t i = 0; i < s.size(); i++)
+    {
+        if(tmpMap.count(s[i]) == 0)
+        {
+            tmpMap.insert(pair<char,int>(s[i],1));
+        }
+        else
+        {
+            tmpMap.erase(s[i]);
+        }
+    }
+    if(tmpMap.size() == 0 || tmpMap.size() == 1)
+        return true;
+    else
+        return false;
+    */
+
+    // Method 2 - pure simple hashTable
+    char hashTable[HASH_TABLE_SIZE] = {0};
+    for(size_t i = 0; i < s.size(); i++)
+    {
+        if(hashTable[s[i]] == 1)
+            hashTable[s[i]]--;
+        else
+            hashTable[s[i]]++;
+    }
+    size_t count = 0;
+    for(size_t i = 0; i < HASH_TABLE_SIZE; i++)
+    {
+        if(hashTable[i] == 1)
+            count++;
+    }
+    if(count == 1 || count == 0)
+        return true;
+    else
+        return false;
+}
+
+
 int main()
 {
     Solution solu;
@@ -127,7 +172,9 @@ int main()
     cout << "abc:" << abc << endl;
 	   
     PRINTLINE
-    demoreplaceSpaces();
+    //demoreplaceSpaces();
+    string testStr = "aaa";
+    canPermutePalindrome(testStr);
 	   
     return 0;
 }
