@@ -13,6 +13,8 @@
 #include <vector>
 #include <queue>
 #include <stack>
+#include <set>
+#include <map>
 #include "TestHelper.h"
 #include "LeetCodeStruct.h"
 using namespace std;
@@ -423,7 +425,187 @@ public:
         return curNode;
     }
     
+    /* 面试题 02.01. 移除重复节点 */
+    ListNode* removeDuplicateNodes(ListNode* head) {
+        if(head == NULL || head->next == NULL)
+            return head;
+        int hashTable[20001] = { 0 };
+        ListNode* pre = head;
+        hashTable[pre->val] = 1;
+        ListNode* cur = head->next;
+        while(cur != NULL)
+        {
+            if(hashTable[cur->val] == 1)
+            {
+                cur = cur->next;
+                pre->next = cur;
+                continue;
+            }
+            hashTable[cur->val] = 1;
+            pre = cur;
+            cur = cur->next;
+        }
+        return head;
+    }
+    
+    /*  面试题 01.07. 旋转矩阵  */
+    void rotate(vector<vector<int>>& matrix) {
+        size_t rowSize = matrix.size();
+        size_t colSize = matrix[0].size();
+        vector<vector<int>> res = matrix;
+        if(rowSize != colSize)
+            return;
+        for(int i = 0; i < rowSize; i++)
+        {
+            for(int j = 0; j < colSize; j++)
+            {
+//                int tmp = matrix[i][j];
+//                matrix[i][j] = matrix[j][colSize- 1 - i];
+//                matrix[j][colSize - 1 -i] = tmp;
+                //swap(matrix[i][j], matrix[j][colSize-1-i]);
+                res[j][colSize-1-i] = matrix[i][j];
+            }
+        }
+        matrix = res;
+    }
+    
+    /* 1290. 二进制链表转整数 */
+    int getDecimalValue(ListNode* head) {
+        int sum = 0;
+        while(head != NULL)
+        {
+            sum = (sum << 1) + head->val;
+            head = head->next;
+        }
+        return sum;
+    }
+    
+    int majorityElement(vector<int>& nums) {
+        map<int,int> numCount;
+        for(auto it:nums)
+            numCount[it]++;
+        map<int,int> countNum;
+        for(auto it:numCount)
+            countNum.insert(make_pair(it.second,it.first));
+        return countNum.rbegin()->second;
+    }
+    
+    /* 剑指 Offer 57. 和为s的两个数字 */
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> res;
+#if 1
+        //暴力破解
+        for(size_t i = 0 ; i < nums.size(); i++)
+        {
+            int curTarget = target - nums[i];
+            for(auto j = i + 1; j < nums.size(); j++)
+            {
+                if(curTarget == nums[j])
+                {
+                    res.push_back(curTarget);
+                    res.push_back(nums[j]);
+                    return res;
+                }
+            }
+        }
+        return res;
+
+#else
+        map<int,int> numCount;
+        for(auto it:nums)
+            numCount[it]++;
+#endif
+    }
+    
+    
+    /* 剑指 Offer 52. 两个链表的第一个公共节点 */
+    size_t getLinkNodeLength(ListNode *head)
+    {
+        size_t length = 0;
+        ListNode* cur = head;
+        while(cur != nullptr)
+        {
+            length++;
+            cur = cur->next;
+        }
+        return length;
+    }
+    
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        size_t lenA = getLinkNodeLength(headA);
+        size_t lenB = getLinkNodeLength(headB);
+        ListNode *fastPtr,*slowPtr;
+        size_t diff;
+        if(lenA > lenB)
+        {
+            fastPtr = headA;
+            slowPtr = headB;
+            diff = lenA - lenB;
+        }
+        else
+        {
+            fastPtr = headB;
+            slowPtr = headA;
+            diff = lenB - lenA;
+        }
+        while(diff)
+        {
+            fastPtr = fastPtr->next;
+            diff--;
+        }
+
+        while(fastPtr != NULL && slowPtr != NULL && slowPtr != fastPtr)
+        {
+            fastPtr = fastPtr->next;
+            slowPtr = slowPtr->next;
+        }
+        if(slowPtr == fastPtr)
+            return slowPtr;
+        return nullptr;
+    }
+
+    /*  剑指 Offer 57. 和为s的两个数字
+     输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。
+     */
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> res;
+#if 0         //暴力破解: 对于大数组，时间超限
+        for(size_t i = 0 ; i < nums.size(); i++)
+        {
+            int curTarget = target - nums[i];
+            for(auto j = i + 1; j < nums.size(); j++)
+            {
+                if(curTarget == nums[j])
+                {
+                    res.push_back(nums[i]);
+                    res.push_back(nums[j]);
+                    return res;
+                }
+            }
+        }
+#else
+        // 使用map存储各数值，更方便查找，但忽略了相等的情况
+        map<int,int> numCount;
+        for(auto it:nums)
+            numCount[it]++;
+        for(auto it: numCount)
+        {
+            int curTarget = target - it.first;
+            if(numCount.count(curTarget))
+            {
+                    res.push_back(it.first);
+                    res.push_back(curTarget);
+                    return res;
+            }
+        }
+#endif
+        return res;
+    }
+
+
 };
+
+
 
 
 #endif /* DailyEx_h */

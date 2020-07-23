@@ -163,8 +163,122 @@ void demoReverseList()
         cout << curNode->val << "->";
         curNode = curNode->next;
     }
+}
+
+void demoremoveDuplicateNodes()
+{
+    // [1, 2, 3, 3, 2, 1]
+    ListNode* head = new ListNode(1);
+    ListNode* curNode = head;
+    curNode->next = new ListNode(1);
+    curNode = curNode->next;
+    curNode->next = new ListNode(2);
+    curNode = curNode->next;
+    curNode->next = new ListNode(3);
+    curNode = curNode->next;
+    curNode->next = new ListNode(3);
+    curNode = curNode->next;
+    curNode->next = new ListNode(2);
+    curNode = curNode->next;
+    curNode->next = new ListNode(1);
+    curNode = curNode->next;
+    curNode->next = NULL;
     
+    curNode = head;
+    while(curNode != NULL)
+    {
+        cout << curNode->val << "->";
+        curNode = curNode->next;
+    }
     
+    Solution solution = Solution();
+    ListNode *newHead = solution.removeDuplicateNodes(head);
+
+    cout << "\nnew Result:" << endl;
+    curNode = newHead;
+    while(curNode != NULL)
+    {
+        cout << curNode->val << "->";
+        curNode = curNode->next;
+    }
+    cout << endl;
+    
+    cout << "test getLinkNodeLength:" << endl;
+    cout << solution.getLinkNodeLength(head) << endl;
+}
+
+void demorotate()
+{
+    vector<vector<int>> matrix = {  {1,2,3},
+                                    {4,5,6},
+                                    {7,8,9}};
+    
+    Solution solution = Solution();
+    solution.rotate(matrix);
+    for(auto row:matrix)
+    {
+        for(auto col:row)
+        {
+            cout << col << "  ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+
+}
+
+void tmpDemo()
+{
+    string s1 = "waterbottle";
+    string s2 = "erbottlewat";
+    cout <<  ((s1 + s1).find(s2) != string::npos) << endl;
+    
+    vector<vector<int>> res;
+    res.push_back({1,3,4});
+    
+    vector<int> a = {1,3,2};
+    vector<int> b = {1,3,2,4};
+    if(a == b)
+        cout << "equal.." << endl;
+    
+    set<int> test;
+    test.insert(3);
+    test.insert(1);
+    test.insert(2);
+    vector<int> testB(test.begin(),test.end());
+    for(auto iter:testB)
+        cout << iter << " ";
+    
+}
+
+vector<int> getOrderVector(vector<int> &input)
+{
+    for(int i = 0; i < 2; i++)
+    {
+        int minIndex = i;
+        int min = input[i];
+        for(int j = 1; j < 3; j++)
+        {
+            if(input[j] < min)
+            {
+                min  = input[j];
+                minIndex = j;
+            }
+        }
+        swap(input[i],input[minIndex]);
+    }
+    return input;
+}
+
+int sumNums(int n) {
+    return (n == 1)||(sumNums(n-1)+n);
+}
+
+void demomajorityElement()
+{
+    Solution solu = Solution();
+    vector<int> input = {1, 2, 3,3};
+    cout << "rst:" << solu.majorityElement(input) << endl;
     
 }
 
@@ -182,11 +296,31 @@ int main(int argc, const char * argv[]) {
     validateStackSequences_Offer31();
     PRINTLINE
     demoQueue();
-#endif
+
     PRINTLINE
     testVecIter();
     demoAnother();
     demoreplaceSpaces();
     demoReverseList();
+
+    cout << "result: " << endl;
+    demoremoveDuplicateNodes();
+    PRINTLINE
+    demorotate();
+    PRINTLINE
+    tmpDemo();
+    
+    PRINTLINE
+    vector<int> input = {3,-2,-1};
+    vector<int> res = getOrderVector(input);
+    for(auto it:res)
+        cout << it << ",";
+    
+    cout << "sumNums:";
+    cout << sumNums(3) << endl;
+#endif
+    demomajorityElement();
+    demoremoveDuplicateNodes();
+    
     return 66;
 }
