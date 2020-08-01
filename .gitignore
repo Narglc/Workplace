@@ -1,5 +1,7 @@
 #java:
 *.class
+*.log
+
 
 #narglc:
 *.nar
@@ -11,12 +13,16 @@
 .name
 run.sh
 
+
 #C++
 *.out
 *.o
 
-#xCode project file
+#XCode project file
 #/DataStruct/DataStruct.xcodeproj
+*.pbxproj
+*.xcuserstate
+*.xcbkptlist
 
 #git self
 .gitignore

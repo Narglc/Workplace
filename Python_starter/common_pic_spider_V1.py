@@ -99,7 +99,7 @@ def getStringWithRewardNum(reward_num):
 
 def spiderOneVolume(Number,saveFileName,pathPicPut):
     for pageNo in ['','/2']:
-        urlAddress = "https://fulibus.net/2019"+("%.3d"%Number)+".html"+pageNo
+        urlAddress = "https://fulibus.net/2020"+("%.3d"%Number)+".html"+pageNo
         html = getHtml(urlAddress)
         #article_content = getMainContent(html)
         allPicList = getAllImg(html)
@@ -113,7 +113,7 @@ def spiderOneVolume(Number,saveFileName,pathPicPut):
 if __name__ == "__main__":
     saveFileName = "fulibus_all_pics.log"
     pathPicPut = "/Users/narglc/Downloads/spyder_pics/fulibus/"
-    for pageNo in range(144,145):
+    for pageNo in range(50,51):
         Number = pageNo
         spiderOneVolume(Number,saveFileName,pathPicPut)
 
