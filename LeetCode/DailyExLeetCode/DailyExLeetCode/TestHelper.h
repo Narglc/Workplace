@@ -25,6 +25,14 @@ namespace TestHelper {
 
 }
 
+template<typename T>
+void printVec(vector<T> vec)
+{
+    for(auto each:vec)
+        cout << each << " ";
+    cout << endl;
+}
+
 
 
 #endif /* TestHelper_h */

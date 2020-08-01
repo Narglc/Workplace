@@ -15,6 +15,7 @@
 #include <stack>
 #include <set>
 #include <map>
+#include <math.h>
 #include "TestHelper.h"
 #include "LeetCodeStruct.h"
 using namespace std;
@@ -489,35 +490,7 @@ public:
             countNum.insert(make_pair(it.second,it.first));
         return countNum.rbegin()->second;
     }
-    
-    /* 剑指 Offer 57. 和为s的两个数字 */
-    vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> res;
-#if 1
-        //暴力破解
-        for(size_t i = 0 ; i < nums.size(); i++)
-        {
-            int curTarget = target - nums[i];
-            for(auto j = i + 1; j < nums.size(); j++)
-            {
-                if(curTarget == nums[j])
-                {
-                    res.push_back(curTarget);
-                    res.push_back(nums[j]);
-                    return res;
-                }
-            }
-        }
-        return res;
 
-#else
-        map<int,int> numCount;
-        for(auto it:nums)
-            numCount[it]++;
-#endif
-    }
-    
-    
     /* 剑指 Offer 52. 两个链表的第一个公共节点 */
     size_t getLinkNodeLength(ListNode *head)
     {
@@ -602,7 +575,203 @@ public:
         return res;
     }
 
+    /* 1025. 除数博弈 */
+    int theMostBestPlayer(int N) // 返回值表示黑板上的数字
+    {
+        if(N%2==0)
+        {
+            if((N/2)%2 == 1)
+                return N/2;
+        }
+        else
+        {
+            if(N%3==0)
+                return N/3*2;
+        }
+        return N-1;
+    }
+    
+    
+    bool divisorGame(int N) {
+        int player = 1; //奇数表示爱丽丝
+        while(N != 2 && N != 3)
+        {
+            N = theMostBestPlayer(N);
+            player++;
+        }
+        if(player%2==0 && N == 2)
+            return false;
+        if(player%2==0 && N == 3)
+            return true;
+        if(player%2==1 && N == 2)
+            return true;
+        if(player%2==1 && N == 3)
+            return false;
+        return false;
+        
+        
+//        if(N == 2)
+//            return true;
+//        if(N == 3)
+//            return false;
+//
+//        if(N%2==0)
+//        {
+//            if((N/2)%2 == 1)
+//                return divisorGame(N/2);
+//            else
+//                return divisorGame(N-1);
+//        }
+//        else
+//        {
+//            if(N%3==0)
+//                return divisorGame(N/3*2);
+//            else
+//                return divisorGame(N-1);
+//        }
+    }
 
+    //面试题 05.07. 配对交换
+    int exchangeBits(int num) {
+        int odd  = ((num&0b00101010101010101010101010101010)>>1);
+        int even = ((num&0b00010101010101010101010101010101)<<1);
+        cout << "--> odd:" << odd << " even:" << even <<endl;
+        int res  = (odd|even);
+        return res;
+    }
+    
+    // quickSort
+    int quickSort(vector<int>& nums, int left, int right)
+    {
+        int tmp = nums[left];
+        int greatLine = right;
+        int i = left+1;
+        for(; i <=right; )
+        {
+            if(i > greatLine)
+                break;
+            if(nums[i] <= tmp)
+                i++;
+            else
+            {
+                swap(nums[i],nums[greatLine]);
+                greatLine--;
+            }
+        }
+        swap(nums[left],nums[greatLine]);
+        return greatLine;
+    }
+    
+    int majorityElement2(vector<int>& nums) {
+#if 0 // 方法一： 使用map记录
+        map<int,int> numCount;
+        for(auto it:nums)
+        {
+            numCount[it]++;
+        }
+        for(auto each:numCount)
+        {
+            if(each.second > nums.size()/2)
+                return each.first;
+        }
+        return -1;
+#else   //todo 待优化，超时
+        if(nums.size() == 0)
+            return -1;
+        // 快排取中间值，并检验
+        int mid = nums.size()/2;
+        int curSortIndex = 0;
+        int left = 0;
+        int right = nums.size() - 1;
+        curSortIndex = quickSort(nums,left,right);
+        while(curSortIndex != mid)
+        {
+            if(curSortIndex < mid)
+                left = curSortIndex+1;
+            else
+                right = curSortIndex-1;
+            curSortIndex = quickSort(nums,left,right);
+        }
+        int res = nums[mid];
+        int count = 0;
+        for(auto it:nums)
+        {
+            if(it == res)
+                count++;
+        }
+        if(count > nums.size()/2)
+            return res;
+        else
+            return -1;
+#endif
+    }
+    
+    int nthUglyNumber(int n) {
+        if(n == 1)
+            return 1;
+        map<int,int> uglyNum;
+        size_t count = 5;
+        uglyNum[2] = 66;
+        uglyNum[3] = 66;
+        uglyNum[4] = 66;
+        uglyNum[5] = 66;
+        int from = 6;
+        vector<int> res{2,3,5};
+        while(count < n)
+        {
+            if(from%2 ==0 && uglyNum[from/2] == 66)
+            {
+                uglyNum[from] = 66;
+                res.push_back(from);
+                from++;
+                count++;
+                continue;
+            }
+            if(from%3 ==0 &&uglyNum[from/3] == 66)
+            {
+                uglyNum[from] = 66;
+                res.push_back(from);
+                from++;
+                count++;
+                continue;
+            }
+            if(from%5 ==0 && uglyNum[from/5] == 66)
+            {
+                uglyNum[from] = 66;
+                res.push_back(from);
+                from++;
+                count++;
+                continue;
+            }
+            from++;
+        }
+        return from-1;
+    }
+
+    // 面试题 08.04. 幂集
+    vector<int> getSubSet(vector<int>& nums, size_t bitNum, int select)
+    {
+        vector<int> res;
+        if(select == 0)
+            return res;
+        int bitFlag = pow(2,bitNum);
+        for(int i = 1; i <= bitNum; i++)
+        {
+            if((select&(bitFlag>>i)) != 0)
+                res.push_back(nums[i-1]);
+        }
+        return res;
+    }
+
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        int bitCount = pow(2,nums.size())-1;
+        for(int i = 0; i <= bitCount;i++)
+        {
+            res.push_back(getSubSet(nums, nums.size(), i));
+        }
+        return res;
+    }
 };
 
 

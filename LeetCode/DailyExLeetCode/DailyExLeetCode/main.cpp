@@ -9,6 +9,7 @@
 
 #include "DailyEx.h"
 #include "TestHelper.h"
+#include "leetbook.h"
 #include<cmath>
 
 /* 1103 分糖果*/
@@ -279,11 +280,54 @@ void demomajorityElement()
     Solution solu = Solution();
     vector<int> input = {1, 2, 3,3};
     cout << "rst:" << solu.majorityElement(input) << endl;
-    
 }
 
-int main(int argc, const char * argv[]) {
-#if 0
+void demodivisorGame()
+{
+    Solution solu = Solution();
+    cout << "1025. 除数博弈:" << solu.divisorGame(10) << endl;
+}
+
+void demoexchangeBits()
+{
+    Solution solu = Solution();
+    cout << "面试题 05.07. 配对交换: " << solu.exchangeBits(3) << endl;
+}
+
+void demomajorityElement2()
+{
+    Solution solu = Solution();
+    vector<int> input{3,2,3};
+    printVec(input);
+    cout << "归位:" << solu.majorityElement2(input) << endl;
+    printVec(input);
+}
+
+void demo_nthUglyNumber()
+{
+    Solution solu = Solution();
+    cout << solu.nthUglyNumber(15) << endl;
+}
+
+void demo_subsets()
+{
+    vector<int> input{1,2,3};
+    Solution solu = Solution();
+    vector<vector<int>> out = solu.subsets(input);
+    
+    for(auto first:out)
+    {
+        cout << "<";
+        for(auto each:first)
+        {
+            cout << each << "-";
+        }
+        cout << ">" <<endl;
+    }
+}
+
+void old_demo_test_without_system_study()
+{
     PRINTLINE
     distributeCandies_1103();
     PRINTLINE
@@ -318,9 +362,81 @@ int main(int argc, const char * argv[]) {
     
     cout << "sumNums:";
     cout << sumNums(3) << endl;
-#endif
+
     demomajorityElement();
     demoremoveDuplicateNodes();
+    demodivisorGame();
     
+    int num = 3;
+    cout << ((num&0b00101010101010101010101010101010) >> 1) << endl;
+    cout << ((num&0b00010101010101010101010101010101)<<1) << endl;
+    cout << (0b01|0b10) <<endl;
+    demoexchangeBits();
+
+    demomajorityElement2();
+    demo_nthUglyNumber();
+    demo_subsets();
+}
+
+/* leetbook demo */
+void demo_removeDuplicates()
+{
+    vector<int> nums1{1,2,3,4,5,6};
+    vector<int> nums2{0,0,1,1,1,2,2,3,3,4};
+    printVec(nums2);
+    int last = removeDuplicates(nums2);
+    cout << "got num count:" << last << endl;
+    printVec(nums2);
+    
+    // 排序
+    vector<int> nums3{5,2,3,1,7,6};
+    printVec(nums3);
+    sort(nums3.begin(), nums3.end());
+    printVec(nums3);
+}
+
+void demo_firstUniqChar()
+{
+    string s = "loveleetcode";
+    cout << "first: " << firstUniqChar(s) << endl;
+}
+
+
+void demo_fizzBuzz()
+{
+    vector<string> res = fizzBuzz(15);
+    printVec(res);
+}
+
+void demo_hammingWeight()
+{
+    cout << "bit 1 num: " << hammingWeight(0b00000000000000000000000000001011) << endl;
+}
+
+void demo_isValid()
+{
+    cout << "vaild? " << isValid("}");
+    
+}
+
+/* leetbook demo with system study*/
+void leetbook_ex_with_system_study()
+{
+    demo_removeDuplicates();
+    PRINTLINE
+    demo_firstUniqChar();
+    PRINTLINE
+    demo_fizzBuzz();
+    PRINTLINE
+    demo_hammingWeight();
+    PRINTLINE
+    demo_isValid();
+}
+
+int main(int argc, const char * argv[]) {
+    //old_demo_test_without_system_study();
+    
+    leetbook_ex_with_system_study();
+
     return 66;
 }
