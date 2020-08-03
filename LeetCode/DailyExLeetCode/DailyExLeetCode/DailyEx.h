@@ -774,7 +774,133 @@ public:
     }
 };
 
+    /* 剑指 Offer 33. 二叉搜索树的后序遍历序列 */
+#define VERSION_ONE 1
+#if VERSION_ONE
+    /* 优化以后的版本 数组过大时，递归栈过大，导致超时 */
+    int isBinarySearchTree(vector<int>& postorder, int begin, int end)  // [begin,end)
+    {
+        bool flag = false;
+        int firstMaxIndex = 0;
+        int root = postorder[end-1];
+        for(int i = begin; i < end; i++)
+        {
+            if(!flag)
+            {
+                if(postorder[i] > root)
+                {
+                    flag = true;
+                    firstMaxIndex = i;
+                }
+            }
+            else
+            {
+                if(postorder[i] < root)
+                    return -1;
+            }
+        }
+        return firstMaxIndex;
+    }
+
+    bool verifyPostorder(vector<int>& postorder, int begin, int end)
+    {
+        if(end - begin < 3)
+            return true;
+        int flag = isBinarySearchTree(postorder, begin, end);
+        if(flag == -1)
+        {
+            return false;
+        }
+        return verifyPostorder(postorder, 0, flag) && verifyPostorder(postorder, flag, (int)(end-1));
+    }
 
 
+    bool verifyPostorder(vector<int>& postorder) {
+        return verifyPostorder(postorder,0,(int)postorder.size());
+    }
+#else
+    /* 第一个版本 */
+    int isBinarySearchTree(vector<int>& postorder)
+    {
+        bool flag = false;
+        int firstMaxIndex = 0;
+        int root = postorder[postorder.size()-1];
+        for(int i = 0; i < postorder.size(); i++)
+        {
+            if(!flag)
+            {
+                if(postorder[i] > root)
+                {
+                    flag = true;
+                    firstMaxIndex = i;
+                }
+            }
+            else
+            {
+                if(postorder[i] < root)
+                    return -1;
+            }
+        }
+        return firstMaxIndex;
+    }
+    vector<int> getSubArray(vector<int>& postorder, int begin, int end)
+    {
+        vector<int> res;
+        for(size_t i = begin; i < end; i++)
+            res.push_back(postorder[i]);
+        return res;
+    }
+
+    bool verifyPostorder(vector<int>& postorder) {
+        if(postorder.size() < 3)
+            return true;
+        int flag = isBinarySearchTree(postorder);
+        if(flag == -1)
+        {
+            return false;
+        }
+        vector<int> leftArr  = getSubArray(postorder, 0, flag);
+        vector<int> rightArr = getSubArray(postorder, flag, postorder.size()-1);
+        return verifyPostorder(leftArr) && verifyPostorder(rightArr);
+    }
+#endif
+
+    /* 剑指 Offer 62. 圆圈中最后剩下的数字 */
+    /* 使用数组模拟，超时；应该使用数学归纳法解决*/
+    int lastRemaining(int n, int m) {
+        if(n == 1)
+            return 0;
+
+        bool* data = new bool[n];
+        for(auto i = 0;i < n; i++)
+            data[i] = true;
+
+        int curIndex = 0;
+        int curLen   = n;
+
+        while(curLen > 1)
+        {
+            int curNextM = m%curLen;
+            for(int j = 1; j <= curNextM; )
+            {
+                if(curIndex == n)
+                    curIndex = 0;
+                if(data[curIndex])
+                    j++;
+                curIndex++;
+            }
+            data[curIndex-1] = false;
+            curLen--;
+        }
+        cout << "begin:";
+        for(auto i = 0;i < n; i++)
+            cout << data[i] << "->";
+        cout << "end" << endl;
+        
+        for(auto i = 0;i < n; i++)
+            if(data[i])
+                return i;
+        return -1;
+    }
 
 #endif /* DailyEx_h */

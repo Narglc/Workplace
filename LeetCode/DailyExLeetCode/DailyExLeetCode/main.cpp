@@ -11,6 +11,7 @@
 #include "TestHelper.h"
 #include "leetbook.h"
 #include<cmath>
+#include <sstream>
 
 /* 1103 分糖果*/
 void distributeCandies_1103()
@@ -419,6 +420,101 @@ void demo_isValid()
     
 }
 
+void demo_verifyPostorder()
+{
+    vector<int> input{4, 8, 6, 12, 16, 14, 10};
+    cout << "verifyPostorder: " << endl;
+    assert(verifyPostorder(input) == true);
+}
+
+void demo()
+{
+    string data = "[1,2,3,null,null,4,5]";
+    
+#if 1
+    string filter = data.substr(1,data.size()-2);
+
+    vector<int> numArray;
+    vector<bool> isValid;
+    string::size_type pos;
+    while((pos = filter.find(",")) != string::npos)
+    {
+        string tmp = filter.substr(0,pos);
+        if(tmp == "null")
+        {
+            isValid.push_back(false);
+        }
+        else
+        {
+            isValid.push_back(true);
+            numArray.push_back(stoi(tmp));
+        }
+
+        filter = filter.substr(pos+1);
+    }
+    if(filter != "null")
+    {
+        isValid.push_back(true);
+        numArray.push_back(stoi(filter));
+    }
+        
+    
+
+    cout << "getNumArray: " << numArray.size() << endl;
+    for(auto it:numArray)
+        cout << it << "|";
+#endif
+    
+//    pos = filter.find(",");
+//    if(string::npos != pos )
+//        cout << "---" << pos << endl;
+//    int getNum = stoi(filter.substr(0,pos));
+//    cout << "getNum: " << getNum << endl;
+//
+}
+
+void demo_new_and_delete()
+{
+    const int MY_STACK_INIT_SIZE = 2;
+    int *data = NULL;
+
+    data = new int[MY_STACK_INIT_SIZE];
+    int size = 0;
+    data[size++] = 1;
+    data[size++] = 2;
+    
+    if(size == MY_STACK_INIT_SIZE)
+    {
+        int* newData = new int[2*MY_STACK_INIT_SIZE];
+        for(size_t i = 0; i < MY_STACK_INIT_SIZE; i++)
+        {
+            newData[i] = data[i];
+        }
+            delete[] data;
+            data = newData;
+        data[size++] = 3;
+        data[size++] = 4;
+    }
+    for(size_t i = 0; i < 2*MY_STACK_INIT_SIZE; i++)
+        cout << data[i] << " -- ";
+}
+
+void demo_3(int n)
+{
+    bool* arr = new bool[n];
+    cout << "begin:";
+    for(auto i = 0;i < n; i++)
+        arr[i] = false;
+    for(auto i = 0;i < n; i++)
+        cout << arr[i] << "->";
+    cout << "end" << endl;
+}
+
+void demo_lastRemaining_62()
+{
+    cout << "demo_lastRemaining_62: " << lastRemaining(70866, 116922) << endl;
+}
+
 /* leetbook demo with system study*/
 void leetbook_ex_with_system_study()
 {
@@ -431,6 +527,17 @@ void leetbook_ex_with_system_study()
     demo_hammingWeight();
     PRINTLINE
     demo_isValid();
+    PRINTLINE
+    demo_verifyPostorder();
+    PRINTLINE
+    demo();
+    PRINTLINE
+    cout << " demo_new_and_delete : " << endl;
+    demo_new_and_delete();
+    PRINTLINE
+    demo_3(6);
+    PRINTLINE
+    demo_lastRemaining_62();
 }
 
 int main(int argc, const char * argv[]) {
