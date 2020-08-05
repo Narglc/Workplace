@@ -903,4 +903,68 @@ public:
         return -1;
     }
 
+    /* 两数之和 II - 输入有序数组 */
+    int binarySearch(vector<int>& numbers, int left, int right, int target)
+    {
+        int mid = 0;
+        while(left <= right)
+        {
+            mid = left + (right - left);
+            if(numbers[mid] == target)
+                return mid;
+            if(numbers[mid] > target)
+                right = mid - 1;
+            if(numbers[mid] < target)
+                left = mid + 1;
+        }
+        return -1;
+    }
+
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        vector<int> res;
+        if(numbers.size() < 2)
+            return res;
+#if 0   // 方法一：二分查找法，最后一个用例超时
+        int secondNumIndex;
+        int numToFound;
+        for(int i = 0; i < numbers.size() - 1; i++)
+        {
+            numToFound = target - numbers[i];
+            for(int j = i+1; j < numbers.size(); j++)
+            {
+                if(numbers[j] > numToFound)
+                    break;
+                secondNumIndex = binarySearch(numbers, j, (int)(numbers.size()-1), numToFound);
+                if(secondNumIndex != -1)
+                {
+                    res.push_back(i+1);
+                    res.push_back(secondNumIndex+1);
+                    return res;
+                }
+            }
+        }
+#else   // 方法二：双指针法
+        int left = 0;
+        int right = (int)numbers.size() - 1;
+        while(left < right)
+        {
+            if(numbers[left] + numbers[right] == target)
+            {
+                res.push_back(left+1);
+                res.push_back(right+1);
+                return res;
+            }
+            else if(numbers[left] + numbers[right] > target)
+            {
+                right--;
+            }
+            else
+            {
+                left++;
+            }
+        }
+#endif
+        return res;
+    }
+
 #endif /* DailyEx_h */

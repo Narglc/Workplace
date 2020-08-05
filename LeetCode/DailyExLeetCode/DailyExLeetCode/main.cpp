@@ -512,7 +512,15 @@ void demo_3(int n)
 
 void demo_lastRemaining_62()
 {
-    cout << "demo_lastRemaining_62: " << lastRemaining(70866, 116922) << endl;
+    cout << "demo_lastRemaining_62: " << lastRemaining(25, 10) << endl;
+}
+
+void demo_twoSum()
+{
+    vector<int> test{0,0,0,0,0,0,0,0,0,0,2,3,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9};
+    vector<int> out = twoSum(test, 5);
+    cout << "two Sum: ";
+    cout << out[0] << " = " << out[1] << endl;
 }
 
 /* leetbook demo with system study*/
@@ -538,6 +546,8 @@ void leetbook_ex_with_system_study()
     demo_3(6);
     PRINTLINE
     demo_lastRemaining_62();
+    PRINTLINE
+    demo_twoSum();
 }
 
 int main(int argc, const char * argv[]) {
