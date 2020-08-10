@@ -1,51 +1,144 @@
 .
-├── git.tree
+├── AlgorithmVideo
+│   ├── AlgorithmVideo
+│   │   ├── SortTestHelper.h
+│   │   ├── Student.h
+│   │   ├── UnionFind.h
+│   │   └── main.cpp
+│   └── AlgorithmVideo.xcodeproj
+│       ├── project.pbxproj
+│       ├── project.xcworkspace
+│       │   ├── contents.xcworkspacedata
+│       │   ├── xcshareddata
+│       │   │   └── IDEWorkspaceChecks.plist
+│       │   └── xcuserdata
+│       │       └── narglc.xcuserdatad
+│       │           └── UserInterfaceState.xcuserstate
+│       └── xcuserdata
+│           └── narglc.xcuserdatad
+│               ├── xcdebugger
+│               │   └── Breakpoints_v2.xcbkptlist
+│               └── xcschemes
+│                   └── xcschememanagement.plist
+├── BaiduPaddleStudy
+├── CosPlay
+│   ├── layer3Cell
+│   │   ├── a.out
+│   │   ├── carrier_obj.h
+│   │   ├── cos_common.h
+│   │   ├── oam_proc.cpp
+│   │   └── phy_cell.h
+│   └── orchTest
+│       ├── a.out
+│       └── orcheDemo.cpp
+├── DataStruct
+│   ├── DataStruct
+│   │   ├── dataStruct.cpp
+│   │   ├── dataStruct.hpp
+│   │   └── main.cpp
+│   └── DataStruct.xcodeproj
+│       ├── project.pbxproj
+│       ├── project.xcworkspace
+│       │   ├── contents.xcworkspacedata
+│       │   ├── xcshareddata
+│       │   │   └── IDEWorkspaceChecks.plist
+│       │   └── xcuserdata
+│       │       └── narglc.xcuserdatad
+│       │           └── UserInterfaceState.xcuserstate
+│       └── xcuserdata
+│           └── narglc.xcuserdatad
+│               └── xcschemes
+│                   └── xcschememanagement.plist
 ├── Java_starter
+│   ├── Hunting
+│   │   ├── Hunter.java
+│   │   ├── Review.java
+│   │   ├── Review_Day3.java
+│   │   ├── Review_Day4.java
+│   │   ├── Review_Day5.java
+│   │   ├── Review_Day6.java
+│   │   ├── Review_day2.java
+│   │   └── Test_Method.java
 │   ├── newStart
-│   │   ├── caculate.java
 │   │   ├── Day10ex.java
 │   │   ├── Day6.java
 │   │   ├── Day7.java
 │   │   ├── Day8.java
-│   │   ├── deleteZeros.java
 │   │   ├── ExceptionEx.java
+│   │   ├── Outer.java
+│   │   ├── caculate.java
+│   │   ├── deleteZeros.java
 │   │   ├── findMaxInArr.java
 │   │   ├── nar_trim.java
-│   │   ├── Outer.java
 │   │   ├── pack_test.java
 │   │   ├── revChars.java
 │   │   ├── run.sh
 │   │   └── xEx.java
 │   └── oldCode
-│       ├── catchNum.java
 │       ├── Demo.java
 │       ├── HelloWorld.java
-│       ├── initTelphone.java
 │       ├── Main.java
 │       ├── Stupid.java
-│       └── Telphone.java
+│       ├── Telphone.java
+│       ├── catchNum.java
+│       └── initTelphone.java
+├── LeetCode
+│   ├── DailyExLeetCode
+│   │   ├── DailyExLeetCode
+│   │   │   ├── DailyEx.h
+│   │   │   ├── LeetCodeStruct.h
+│   │   │   ├── TestHelper.h
+│   │   │   ├── leetbook.h
+│   │   │   └── main.cpp
+│   │   └── DailyExLeetCode.xcodeproj
+│   │       ├── project.pbxproj
+│   │       ├── project.xcworkspace
+│   │       │   ├── contents.xcworkspacedata
+│   │       │   ├── xcshareddata
+│   │       │   │   └── IDEWorkspaceChecks.plist
+│   │       │   └── xcuserdata
+│   │       │       └── narglc.xcuserdatad
+│   │       │           └── UserInterfaceState.xcuserstate
+│   │       └── xcuserdata
+│   │           └── narglc.xcuserdatad
+│   │               ├── xcdebugger
+│   │               │   └── Breakpoints_v2.xcbkptlist
+│   │               └── xcschemes
+│   │                   └── xcschememanagement.plist
+│   ├── DataStructLeetCode.h
+│   ├── SolutionLeetCode.h
+│   ├── TestHelp.h
+│   ├── TestLeetCode.cpp
+│   ├── a.out
+│   ├── build.sh
+│   ├── build_v2.sh
+│   └── tmp151.cpp
+├── OfferHunter
+│   ├── a.out
+│   ├── demo
+│   ├── offerHunter.cpp
+│   └── offerHunter.h
 ├── Python_starter
-│   ├── autoImgSpyder4meizitu.py
-│   ├── auto_spyder4jiandan.py
 │   ├── CheckIO.py
 │   ├── CollectiveIntelligence.py
-│   ├── doubanPics.py
-│   ├── fMRI_related
-│   │   ├── original_simplify.py
-│   │   ├── simplify.py
-│   │   └── TestData
-│   │       ├── all_fMRI.data
-│   │       ├── single.fMRI.data
-│   │       ├── sub010.data
-│   │       ├── sub011.data
-│   │       └── sub012.data
-│   ├── guess_the_number.py
 │   ├── Hello4Stupid.py
 │   ├── LeetCode
 │   │   └── two_sum.py
+│   ├── Single7days
+│   │   ├── a.out
+│   │   ├── faq.c
+│   │   ├── fifthDay.py
+│   │   ├── firstDay.py
+│   │   ├── fourthDay.py
+│   │   ├── narComplie.sh
+│   │   ├── secondDay.py
+│   │   ├── seventhDay.py
+│   │   ├── sixthDay.py
+│   │   └── thirdDay.py
 │   ├── Spider
 │   │   ├── 1.shtml
 │   │   ├── 2.shtml
+│   │   ├── Current_test.py
 │   │   ├── blog
 │   │   │   ├── post-773339-104664588-1.shtml
 │   │   │   ├── post-773339-46750106-1.shtml
@@ -66,11 +159,29 @@
 │   │   │   ├── post-773339-71229559-1.shtml
 │   │   │   ├── post-773339-82260191-1.shtml
 │   │   │   └── post-773339-82452482-1.shtml
-│   │   ├── Current_test.py
+│   │   ├── test.py
 │   │   ├── testall.py
 │   │   ├── testpart.py
-│   │   ├── test.py
 │   │   └── tianya_zhuawen.py
+│   ├── autoImgSpyder4meizitu.py
+│   ├── auto_spyder4jiandan.py
+│   ├── common_pic_spider_V1.py
+│   ├── common_pic_spider_V1.pyc
+│   ├── doubanPics.py
+│   ├── fMRI_related
+│   │   ├── TestData
+│   │   │   ├── all_fMRI.data
+│   │   │   ├── single.fMRI.data
+│   │   │   ├── sub010.data
+│   │   │   ├── sub011.data
+│   │   │   └── sub012.data
+│   │   ├── original_simplify.py
+│   │   └── simplify.py
+│   ├── fulibus_all_pics.log
+│   ├── guess_the_number.py
+│   ├── html_content_process.py
+│   ├── shdsex.html
+│   ├── shdsex.log
 │   ├── spyder_1page4Jiandan.py
 │   ├── spyder_Template
 │   │   ├── spyder.py
@@ -78,8 +189,115 @@
 │   ├── tk_test.py
 │   └── txt_spyder.py
 ├── README.md
-└── Shell_starter
-    ├── chang_names.sh
-    └── test_array.sh
+├── Shell_starter
+│   ├── chang_names.sh
+│   ├── demo.sh
+│   ├── if_while_fun.sh
+│   ├── log.txt
+│   ├── testApp_source.sh
+│   └── test_array.sh
+├── cWorld
+│   ├── cWorld
+│   │   ├── FileDemo.cpp
+│   │   ├── FileDemo.hpp
+│   │   ├── Person.cpp
+│   │   ├── Person.hpp
+│   │   └── main.cpp
+│   └── cWorld.xcodeproj
+│       ├── project.pbxproj
+│       ├── project.xcworkspace
+│       │   ├── contents.xcworkspacedata
+│       │   ├── xcshareddata
+│       │   │   └── IDEWorkspaceChecks.plist
+│       │   └── xcuserdata
+│       │       └── narglc.xcuserdatad
+│       │           └── UserInterfaceState.xcuserstate
+│       └── xcuserdata
+│           └── narglc.xcuserdatad
+│               ├── xcdebugger
+│               │   └── Breakpoints_v2.xcbkptlist
+│               └── xcschemes
+│                   └── xcschememanagement.plist
+├── cmake
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   │   ├── 3.15.2
+│   │   │   ├── CMakeCCompiler.cmake
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   ├── CompilerIdC
+│   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   ├── a.out
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       ├── a.out
+│   │   │       └── tmp
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── CMakeOutput.log
+│   │   ├── CMakeTmp
+│   │   ├── Makefile.cmake
+│   │   ├── Makefile2
+│   │   ├── TargetDirectories.txt
+│   │   ├── cmake.check_cache
+│   │   ├── demo1.dir
+│   │   │   ├── CXX.includecache
+│   │   │   ├── DependInfo.cmake
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── depend.internal
+│   │   │   ├── depend.make
+│   │   │   ├── flags.make
+│   │   │   ├── link.txt
+│   │   │   ├── main.cpp.o
+│   │   │   └── progress.make
+│   │   └── progress.marks
+│   ├── CMakeLists.txt
+│   ├── Makefile
+│   ├── cmake_install.cmake
+│   ├── demo1
+│   └── main.cpp
+├── code_�\206\231�\231大家�\234\213�\232\204C++书
+│   ├── Code::Blocks
+│   │   └── ProjectStart
+│   │       ├── ProjectStart.cbp
+│   │       ├── ProjectStart.depend
+│   │       ├── ProjectStart.layout
+│   │       ├── bin
+│   │       │   └── Debug
+│   │       │       └── ProjectStart
+│   │       ├── main.cpp
+│   │       ├── person.h
+│   │       └── src.cpp
+│   ├── ReadMe.md
+│   ├── ch02_1.cpp
+│   ├── ch03_1.cpp
+│   ├── ch04_1.cpp
+│   ├── ch04_read.cpp
+│   ├── ch05_1.cpp
+│   ├── ch05_temperature.cpp
+│   ├── ch06_1.cpp
+│   ├── ch06_2.cpp
+│   ├── ch06_swap.cpp
+│   ├── ch07.cpp
+│   ├── ch07_quote.cpp
+│   ├── ch08_overriding.cpp
+│   ├── ch08_pets.cpp
+│   ├── first.cpp
+│   └── leetcodeEx
+│       ├── a.out
+│       ├── huixingwen.cpp
+│       └── testString.cpp
+├── git.tree
+└── ybt
+    ├── ClassShapeCircle.cpp
+    ├── bubble.c
+    ├── chaFen.cpp
+    ├── cmdTest.c
+    ├── error.log
+    ├── in.log
+    └── testString.cpp
 
-11 directories, 71 files
+78 directories, 222 files
