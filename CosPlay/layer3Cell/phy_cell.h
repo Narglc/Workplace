@@ -2,7 +2,9 @@
 #define PHY_CELL_H
 
 #include "cos_common.h"
-#include "carrier_obj.h"
+//#include "carrier_obj.h"
+
+class carrier_obj;
 
 class phy_cell
 {
