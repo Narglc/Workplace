@@ -60,7 +60,7 @@ public:
     }
 #endif
     
-    
+//  #lizard forgives    
     int maxProfit(vector<int>& prices) {
         // Method 1: 暴力破解
 #ifdef METHOD_FIRST
