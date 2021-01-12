@@ -36,6 +36,6 @@ type golang interface{}
 
 // 由 main 函数作为程序入口点启动
 func main() {
-	std.Println("hello, the android phone.")
+	std.Println("hello, lecture 02...")
 
 }
